@@ -25,8 +25,10 @@ class BeritaController extends Controller
             'gambar' => 'required|file|image|mimes:jpeg,png,jpg|max:2048'
         ]);
 
+        $file = $request->gambar_berita;
         $nama_file = time() . "_" . $request->gambar->getClientOriginalName();
-        $request->gambar->move(public_path('/img/foto_berita'), $nama_file);
+        $file = $request->gambar->storeAs('gambar_berita', $nama_file, 'public');
+        // $request->gambar->move(public_path('/img/foto_berita'), $nama_file);
 
         $slug = Str::slug($request->judul);
 
@@ -38,7 +40,7 @@ class BeritaController extends Controller
             'ringkasan_berita' => $request->ringkasan,
             'isi_berita' => $request->isi,
             'status' => $request->status,
-            'gambar_berita' => $nama_file
+            'gambar_berita' => $file
         ]);
         // dd($data);
 

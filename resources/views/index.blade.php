@@ -373,10 +373,10 @@
                     <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
                         <div class="portfolio-card beritaTengah mx-auto ">
                             <div class="portfolio-image beritaTengah mx-auto ">
-                                <img src="{{ asset('/img/foto_berita/'.$b->gambar_berita) }}" class="img-fluid" alt="" loading="lazy">
+                                <img src="{{ asset('/storage/'.$b->gambar_berita) }}" class="img-fluid" alt="" loading="lazy">
                                 <div class="portfolio-overlay">
                                     <div class="portfolio-actions">
-                                        <a href=" {{ asset('/img/foto_berita/'.$b->gambar_berita)}}" class="glightbox preview-link" data-gallery="portfolio-gallery-web"><i class="bi bi-eye"></i></a>
+                                        <a href=" {{ asset('/storage/'.$b->gambar_berita)}}" class="glightbox preview-link" data-gallery="portfolio-gallery-web"><i class="bi bi-eye"></i></a>
                                         <!-- <a href="portfolio-details.html" class="details-link"><i class="bi bi-arrow-right"></i></a> -->
                                     </div>
                                 </div>

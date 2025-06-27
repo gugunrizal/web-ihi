@@ -71,7 +71,7 @@
                                             <td>{{$b->slug}}</td>
                                             <td>{{$b->status}}</td>
                                             <td>
-                                                <img src="{{asset('/img/foto_berita/'.$b->gambar_berita)}}" alt="" width="100px">
+                                                <img src="{{asset('storage/'.$b->gambar_berita)}}" alt="" width="100px">
                                             </td>
                                             <td>
                                                 <a href="{{route('hapusBerita', $b->id)}}" onclick="return confirm('Apakah Yakin?')" class="btn btn-danger btn-sm">Hapus</a>
