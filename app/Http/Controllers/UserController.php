@@ -15,8 +15,18 @@ class UserController extends Controller
 {
     public function index()
     {
-        $berita = Berita::select('*')->where('status', 'publish')->get();
+        $berita = Berita::select('*')
+            ->where('status', 'publish')
+            ->orderBy('created_at', 'desc')
+            ->limit(1)
+            ->get();
         return view('index', ['berita' => $berita]);
+    }
+
+    public function tampilAllBerita()
+    {
+        $berita = Berita::select('*')->get();
+        return view('allBerita', ['berita' => $berita]);
     }
 
     public function tampilBeritaById($id)
@@ -31,6 +41,11 @@ class UserController extends Controller
     public function tampilTim()
     {
         return view('tim');
+    }
+
+    public function tampilAbout()
+    {
+        return view('about');
     }
 
     public function tampil()

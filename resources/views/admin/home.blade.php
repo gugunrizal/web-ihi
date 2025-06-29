@@ -43,7 +43,7 @@
                                     </div>
                                 </div>
                                 <div class="col-auto">
-                                    <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                    <i class="fas fa-book fa-2x text-gray-300"></i>
                                 </div>
                             </div>
                         </div>
@@ -62,7 +62,7 @@
                                     </div>
                                 </div>
                                 <div class="col-auto">
-                                    <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                    <i class="fas fa-book fa-2x text-gray-300"></i>
                                 </div>
                             </div>
                         </div>
@@ -81,7 +81,7 @@
                                     </div>
                                 </div>
                                 <div class="col-auto">
-                                    <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                    <i class="fas fa-book fa-2x text-gray-300"></i>
                                 </div>
                             </div>
                         </div>

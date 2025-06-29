@@ -13,7 +13,7 @@
                             <div class="icon-circle me-2">
                                 <i class="bi bi-bell"></i>
                             </div>
-                            <span class="badge-text me-3">Saatnya jadi masyarakat cerdas</span>
+                            <span class="badge-text me-3">Social and Ecological Justice</span>
                         </div>
                     </div>
 
@@ -51,26 +51,21 @@
                         Institut hijau Indonesia didirikan pada tahun 2008, lembaga ini sengaja dihadirkan untuk menguatkan narasi-narasi tentang keadilan sosial dan keadilan lingkungan hidup. Kemudian, memfasilitasi lahirnya atau tumbuhnya pemimpin-pemimpin yang memiliki keadilan sosial dan ekologi di beragam wilayah dan sektor, serta, mengembangkan strategi kampanye popular agar bisa menjangkau publik luas yang punya perhatian terhadap isu lingkungan hidup <br>
                         Institut Hijau Indonesia secara sungguh-sungguh ingin membangun peradaban hijau Indonesia. Di bawah Yayasan Peradaban Hijau Indonesia, Institut Hijau Indonesia menjadi wadah untuk menuju peradaban Hijau Indonesia yang lebih adil dan lestari.
                     </p>
-                    <!-- <ul>
-                        <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-                        <li><i class="bi bi-check-circle"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-                        <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</span></li>
-                    </ul> -->
-                    <a href="#" class="read-more"><span>Baca Selengkapnya</span><i class="bi bi-arrow-right"></i></a>
+                    <a href="{{route('tampilAbout')}}" class="read-more"><span>Baca Selengkapnya</span><i class="bi bi-arrow-right"></i></a>
                 </div>
 
                 <div class="col-lg-6 about-images" data-aos="fade-up" data-aos-delay="200">
                     <div class="row gy-4">
                         <div class="col-lg-6">
-                            <img src="img/about/about-portrait-1.webp" class="img-fluid" alt="">
+                            <img src="{{asset('img/portfolio/ihi1.JPG')}}" class="img-fluid" alt="">
                         </div>
                         <div class="col-lg-6">
                             <div class="row gy-4">
                                 <div class="col-lg-12">
-                                    <img src="img/about/about-8.webp" class="img-fluid" alt="">
+                                    <img src="{{asset('img/portfolio/ihi2.JPG')}}" class="img-fluid" alt="">
                                 </div>
                                 <div class="col-lg-12">
-                                    <img src="img/about/about-12.webp" class="img-fluid" alt="">
+                                    <img src="{{asset('img/portfolio/ihi3.JPG')}}" class="img-fluid" alt="">
                                 </div>
                             </div>
                         </div>
@@ -104,8 +99,8 @@
                                     <div class="content">
                                         <span class="step-number">01</span>
                                         <div class="card-body">
-                                            <div class="step-icon">
-                                                <img src="{{asset('img/logo-program/logo-gli.png')}}" class="img-fluid" alt="">
+                                            <div class="step-icon" style="background-color: white;">
+                                                <img src="{{asset('img/logo-program/Logo-GLI.png')}}" class="img-fluid" alt="">
                                             </div>
                                             <div class="step-content">
                                                 <h3>Green Leadership Indonesia</h3>
@@ -122,8 +117,8 @@
                                     <div class="content">
                                         <span class="step-number">02</span>
                                         <div class="card-body">
-                                            <div class="step-icon">
-                                                <img src="{{asset('img/logo-program/logo-gym.png')}}" class="img-fluid" alt="">
+                                            <div class="step-icon" style="background-color: white;">
+                                                <img src="{{asset('img/logo-program/Logo-GYM.png')}}" class="img-fluid" alt="">
                                             </div>
                                             <div class="step-content">
                                                 <h3>Green Youth Movement</h3>
@@ -140,7 +135,7 @@
                                     <div class="content">
                                         <span class="step-number">03</span>
                                         <div class="card-body">
-                                            <div class="step-icon">
+                                            <div class="step-icon" style="background-color: white;">
                                                 <img src="{{asset('img/logo-program/Logo-Greenpil.png')}}" class="img-fluid" alt="">
                                             </div>
                                             <div class="step-content">
@@ -158,7 +153,7 @@
                                     <div class="content">
                                         <span class="step-number">04</span>
                                         <div class="card-body">
-                                            <div class="step-icon">
+                                            <div class=" step-icon" style="background-color: white;">
                                                 <img src="{{asset('img/logo-program/Logo-Ekososlab.png')}}" class="img-fluid" alt="">
                                             </div>
                                             <div class="step-content">
@@ -176,7 +171,7 @@
                                     <div class="content">
                                         <span class="step-number">05</span>
                                         <div class="card-body">
-                                            <div class="step-icon">
+                                            <div class="step-icon" style="background-color: white;">
                                                 <img src="{{asset('img/logo-program/Logo-JPH.png')}}" class="img-fluid" alt="">
                                             </div>
                                             <div class="step-content">
@@ -194,8 +189,8 @@
                                     <div class="content">
                                         <span class="step-number">06</span>
                                         <div class="card-body">
-                                            <div class="step-icon">
-                                                <img src="{{asset('img/logo-program/logo-civic-white.png')}}" class="img-fluid" alt="">
+                                            <div class="step-icon" style="background-color: white;">
+                                                <img src="{{asset('img/logo-program/Logo-Civic.png')}}" class="img-fluid" alt="">
                                             </div>
                                             <div class="step-content">
                                                 <h3>Civic Education</h3>
@@ -336,12 +331,62 @@
         <div class="container" data-aos="fade-up" data-aos-delay="100">
 
             <div class="row">
-                <div class="col-12 col-md-3">
+                <div class="col-12 col-md-3 mb-4">
                     <div class="card" style="width: 18rem;">
-                        <img src="{{asset('img/logo-ihi.png')}}" class="card-img-top" alt="...">
+                        <img src="{{asset('img/portfolio/gli1.JPG')}}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <p class="card-text">
-                                Deskripsi Foto Kegiatan
+                            <p class="card-text text-center">
+                                Green Leadership Indonesia
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3 mb-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{{asset('img/portfolio/gli2.JPG')}}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text text-center">
+                                Green Leadership Indonesia
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3 mb-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{{asset('img/portfolio/gli3.JPG')}}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text text-center">
+                                Green Leadership Indonesia
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3 mb-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{{asset('img/portfolio/gli4.png')}}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text text-center">
+                                Green Leadership Indonesia
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3 mb-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{{asset('img/portfolio/gli5.png')}}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text text-center">
+                                Green Leadership Indonesia
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3 mb-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{{asset('img/portfolio/gli6.png')}}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text text-center">
+                                Green Leadership Indonesia
                             </p>
                         </div>
                     </div>
@@ -373,10 +418,10 @@
                     <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
                         <div class="portfolio-card beritaTengah mx-auto ">
                             <div class="portfolio-image beritaTengah mx-auto ">
-                                <img src="{{ asset('/img/foto_berita/'.$b->gambar_berita) }}" class="img-fluid" alt="" loading="lazy">
+                                <img src="{{ asset('/storage/'.$b->gambar_berita) }}" class="img-fluid" alt="" loading="lazy">
                                 <div class="portfolio-overlay">
                                     <div class="portfolio-actions">
-                                        <a href=" {{ asset('/img/foto_berita/'.$b->gambar_berita)}}" class="glightbox preview-link" data-gallery="portfolio-gallery-web"><i class="bi bi-eye"></i></a>
+                                        <a href=" {{ asset('/storage/'.$b->gambar_berita)}}" class="glightbox preview-link" data-gallery="portfolio-gallery-web"><i class="bi bi-eye"></i></a>
                                         <!-- <a href="portfolio-details.html" class="details-link"><i class="bi bi-arrow-right"></i></a> -->
                                     </div>
                                 </div>
@@ -397,6 +442,14 @@
 
             </div>
 
+        </div>
+
+        <div class="container">
+            <div class="row" style="padding-top: 50px;">
+                <div class="col-12 text-center">
+                    <a href="{{route('tampilAllBerita')}}" class="btn btn-success">Selengkapnya</a>
+                </div>
+            </div>
         </div>
 
     </section>
