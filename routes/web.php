@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [UserController::class, 'index'])->name('home');
 Route::get('/admin/logout', [UserController::class, 'logout'])->middleware('auth')->name('logoutAdmin');
 Route::get('/tim', [UserController::class, 'tampilTim'])->name('tampilTim');
+Route::get('/about', [UserController::class, 'tampilAbout'])->name('tampilAbout');
+Route::get('/berita/all', [UserController::class, 'tampilAllBerita'])->name('tampilAllBerita');
 
 // tampilan admin
 Route::get('/login', [UserController::class, 'tampil'])->name('login');

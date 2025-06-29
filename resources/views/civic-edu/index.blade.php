@@ -41,11 +41,13 @@
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a href="{{route('home')}}" class="nav-link contact">Kembali</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://lmscivic.instituthijauindonesia.or.id/" class="nav-link contact">Login LMS</a>
                     </li>
                 </ul>
             </div>
@@ -67,9 +69,9 @@
                         <p class="text-white" data-aos="fade-up" data-aos-delay="100" style="margin-left: 50px;">
                             Saatnya menjadi masyarakat yang lebih Cerdas!
                         </p>
-                        <a href="#" class="custom-btn btn-bg btn mt-3" data-aos="fade-up" data-aos-delay="100" style="margin-left: 50px; font-weight: bold;">
+                        <!-- <a href="#" class="custom-btn btn-bg btn mt-3" data-aos="fade-up" data-aos-delay="100" style="margin-left: 50px; font-weight: bold;">
                             Login LMS
-                        </a>
+                        </a> -->
                     </div>
                 </div>
 

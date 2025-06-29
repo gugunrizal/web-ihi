@@ -14,7 +14,7 @@
     <!-- Nav Item - Dashboard -->
     <li class="nav-item {{ (request()->is('home')) ? 'active' : '' }}">
         <a class="nav-link" href="{{route('tampilHome')}}">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <i class="fas fa-home"></i>
             <span>Dashboard</span></a>
     </li>
 
@@ -28,14 +28,14 @@
 
     <li class="nav-item {{ (request()->is('admin/berita')) ? 'active' : '' }}">
         <a class="nav-link" href="{{route('tampilBerita')}}">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <i class="fas fa-book"></i>
             <span>Berita</span></a>
     </li>
 
     <!-- Nav Item - Utilities Collapse Menu -->
     <li class="nav-item">
         <a class="nav-link" onclick="return confirm('Apakah Anda Yakin?')" href="{{route('logoutAdmin')}}">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <i class="fas fa-sign-out-alt"></i>
             <span>Logout</span></a>
     </li>
 

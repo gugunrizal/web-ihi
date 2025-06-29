@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Institut Hijau Indonesia</title>
+    <title>Berita IHI</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
 
@@ -59,22 +59,44 @@
 
     <main class="main">
         <section class="berita">
-            <div class="container">
-
-                @foreach ($berita as $b)
+            <div class="beritaTengah mx-auto container" data-aos="fade-up" data-aos-delay="100">
                 <div class="container section-title" data-aos="fade-up">
-                    <h2>{{$b->judul}}</h2>
-                    <p>{{$b->ringkasan_berita}}</p>
+                    <h2>Berita Institut Hijau Indonesia</h2>
                 </div><!-- End Section Title -->
 
-                <div class="container" data-aos="fade-up" data-aos-delay="100">
-                    <div class="text-center">
-                        <img src="{{asset('storage/'.$b->gambar_berita)}}" alt="" width="200px">
+                <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+                    <div class="beritaTengah mx-auto row g-4 isotope-container" data-aos="fade-up" data-aos-delay="300">
+
+                        @foreach ($berita as $b)
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
+                            <div class="portfolio-card beritaTengah mx-auto ">
+                                <div class="portfolio-image beritaTengah mx-auto ">
+                                    <img src="{{ asset('/storage/'.$b->gambar_berita) }}" class="img-fluid" alt="" loading="lazy">
+                                    <div class="portfolio-overlay">
+                                        <div class="portfolio-actions">
+                                            <a href=" {{ asset('/storage/'.$b->gambar_berita)}}" class="glightbox preview-link" data-gallery="portfolio-gallery-web"><i class="bi bi-eye"></i></a>
+                                            <!-- <a href="portfolio-details.html" class="details-link"><i class="bi bi-arrow-right"></i></a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="{{route('tampilBeritaById', $b->id)}}">
+                                    <div class="portfolio-content">
+                                        <!-- <span class="category">Green Leadership Indonesia</span> -->
+                                        <h3>{{$b->judul}}</h3>
+                                        <p>{{$b->ringkasan_berita}}</p>
+                                    </div>
+
+                                </a>
+                            </div>
+                        </div>
+                        @endforeach
                     </div>
-                    <p>{{$b->isi_berita}}</p>
+                    <!-- End Portfolio Container -->
 
                 </div>
-                @endforeach
+
             </div>
         </section>
     </main>
