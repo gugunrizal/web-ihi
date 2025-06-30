@@ -16,24 +16,32 @@
     <link href="{{asset('img/civic-edu/logo-civic-white.png')}}" rel="icon">
     <link href="{{asset('img/civic-edu/logo-civic-white.png')}}" rel="apple-touch-icon">
 
-    <link rel="stylesheet" href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('vendor/fontawesome-free/css/font-awesome.min.css')}}">
-    <link rel="stylesheet" href="{{asset('vendor/aos/aos.css')}}">
-    <link rel="stylesheet" href="{{asset('vendor/owl/owl.carousel.min.css')}}">
-    <link rel="stylesheet" href="{{asset('vendor/owl/owl.theme.default.min.css')}}">
+    <!-- <link rel="stylesheet" href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}"> -->
+    <!-- <link rel="stylesheet" href="{{asset('vendor/fontawesome-free/css/font-awesome.min.css')}}"> -->
+    <!-- <link rel="stylesheet" href="{{asset('vendor/aos/aos.css')}}"> -->
+    <!-- <link rel="stylesheet" href="{{asset('vendor/owl/owl.carousel.min.css')}}"> -->
+    <!-- <link rel="stylesheet" href="{{asset('vendor/owl/owl.theme.default.min.css')}}"> -->
 
     <!-- MAIN CSS -->
-    <link rel="stylesheet" href="{{asset('css/templatemo-digital-trend.css')}}">
+    <!-- <link rel="stylesheet" href="{{asset('css/templatemo-digital-trend.css')}}"> -->
+
+    <link rel="stylesheet" href="{{asset('css/templatemo/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/templatemo/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/templatemo/css/aos.css')}}">
+    <link rel="stylesheet" href="{{asset('css/templatemo/css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/templatemo/css/owl.theme.default.min.css')}}">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="{{asset('css/templatemo/css/templatemo-digital-trend.css')}}">
 
 </head>
 
 <body>
 
     <!-- MENU BAR -->
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg" style="background-color: #950c0c;">
         <div class="container">
             <a class="navbar-brand" href="{{route('tampilCivic')}}">
-                <i class="fa fa-line-chart"></i>
                 Civic Education
             </a>
 
@@ -56,11 +64,11 @@
 
 
     <!-- HERO -->
-    <section class="hero hero-bg d-flex justify-content-center align-items-center">
+    <section class="hero hero-bg d-flex justify-content-center align-items-center" style="background-color: #c20303;">
         <div class="container">
             <div class="row">
 
-                <div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center">
+                <div class="col-md-6 d-flex flex-column justify-content-center align-items-center">
                     <div class="hero-text">
 
                         <h1 class="text-white" data-aos="fade-up" data-aos-delay="100" style="margin-left: 50px; font-weight: bold;">
@@ -95,28 +103,300 @@
                 <div class="col-lg-7 mx-auto col-md-10 col-12">
                     <div class="about-info">
 
-                        <h2 class="mb-4" data-aos="fade-up">
-                            Tentang <strong>Civic Education</strong>
+                        <h2 class="mb-2 mx-2" data-aos="fade-up">
+                            Tentang <strong style="color: #950c0c; font-weight: bold;">Civic Education</strong>
                         </h2>
 
                         <p class="mb-0" data-aos="fade-up">
-                            Program Edukasi dari Institut Hijau Indonesia untuk menumbuhkan <strong>kesadaran demokrasi, sosial, dan lingkungan.</strong>
+                            Program Edukasi dari Institut Hijau Indonesia untuk menumbuhkan <strong style="color: #950c0c;">kesadaran demokrasi, sosial, dan lingkungan.</strong>
                             <br><br>
-                            Menggunakan pendekatan inklusif dan berbasis pengalaman, Civic Education mendorong <strong>generasi muda membangun negara yang adil secara sosial dan ekologis.</strong>
+                            Menggunakan pendekatan inklusif dan berbasis pengalaman, Civic Education mendorong <strong style="color: #950c0c;">generasi muda membangun negara yang adil secara sosial dan ekologis.</strong>
                         </p>
                     </div>
                 </div>
 
             </div>
             <div class="row">
-                <div class="col-lg-7 mx-auto col-md-10 col-12 mt-5">
+                <div class="col-12 mt-5">
                     <h2 class="mb-5 text-center" data-aos="fade-up">
                         Prepare Yourself
                         <br>
-                        <strong>for Our Speaker</strong>
+                        <strong style="color: #950c0c; font-weight: bold;">for Our Speaker</strong>
                     </h2>
-                    <div class="about-image mb-5" data-aos="fade-up" data-aos-delay="200">
-                        <img src="{{asset('img/civic-edu/narsum-civic.jpg')}}" class="img-fluid rounded" alt="office">
+                </div>
+            </div>
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="row justify-content-center">
+                    <div class="col-md-3 mb-2 mx-2">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{asset('img/civic-edu/narsum/1.png')}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-center">
+                                    Dr. Qurnia Indah Permata Sari
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-2 mx-2">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{asset('img/civic-edu/narsum/2.png')}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-center">
+                                    Ahmad Fauzi (Ray Rangkuti)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-2 mx-2">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{asset('img/civic-edu/narsum/3.png')}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-center">
+                                    Dani Wahyu Munggoro
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-2 mx-2">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{asset('img/civic-edu/narsum/4.png')}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-center">
+                                    Zainal Arifin Mochtar, S.H., LL.M.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-2 mx-2">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{asset('img/civic-edu/narsum/5.png')}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-center">
+                                    Prof. Dr. H. Jimly Asshiddiqie, S.H., M.H.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-2 mx-2">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{asset('img/civic-edu/narsum/6.png')}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-center">
+                                    Bivitri Susanti, S.H., LL.M.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-2 mx-2">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{asset('img/civic-edu/narsum/7.png')}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-center">
+                                    Sudirman Said, S.Ak., MBA.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-2 mx-2">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{asset('img/civic-edu/narsum/8.png')}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-center">
+                                    Prof. Dr. Bambang Shergi Laksmono, M.Sc.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-2 mx-2">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{asset('img/civic-edu/narsum/9.png')}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-center">
+                                    H. Anies Rashid Baswedan, S.E., M.PP., Ph.D.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-2 mx-2">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{asset('img/civic-edu/narsum/10.png')}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-center">
+                                    Dr. Drs. Imam Budidarmawan Prasojo, M.A., Ph.D.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-2 mx-2">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{asset('img/civic-edu/narsum/11.png')}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-center">
+                                    Prof. Dr. Djohermansyah Djohan, M.A.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-2 mx-2">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{asset('img/civic-edu/narsum/12.png')}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-center">
+                                    Mochammad Afifuddin
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-2 mx-2">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{asset('img/civic-edu/narsum/13.png')}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-center">
+                                    Titi Anggraini, S.H., M.H.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-2 mx-2">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{asset('img/civic-edu/narsum/14.png')}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-center">
+                                    Rocky Gerung
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-2 mx-2">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{asset('img/civic-edu/narsum/15.png')}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-center">
+                                    Dr. Revrisond Baswir, M.B.A., Ak., CA
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-2 mx-2">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{asset('img/civic-edu/narsum/16.png')}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-center">
+                                    Prof. Dr. R. Siti Zuhro, MA.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-2 mx-2">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{asset('img/civic-edu/narsum/17.png')}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-center">
+                                    Muhammad Isnur, S.H., M.H.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-2 mx-2">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{asset('img/civic-edu/narsum/18.png')}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-center">
+                                    Uni Zulfiani Lubis
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-2 mx-2">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{asset('img/civic-edu/narsum/19.png')}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-center">
+                                    Hj. Meutya Viada Hafid, B.Eng., M.IP.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-2 mx-2">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{asset('img/civic-edu/narsum/20.png')}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-center">
+                                    Chalid Muhammad
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-2 mx-2">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{asset('img/civic-edu/narsum/21.png')}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-center">
+                                    Hikmat Hardono
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-2 mx-2">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{asset('img/civic-edu/narsum/22.png')}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-center">
+                                    Noer Fauzi Rachman
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-2 mx-2">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{asset('img/civic-edu/narsum/23.png')}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-center">
+                                    Galuh Wandhita
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-2 mx-2">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{asset('img/civic-edu/narsum/24.png')}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-center">
+                                    Hilmar Farid Setiadi
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-2 mx-2">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{asset('img/civic-edu/narsum/25.png')}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-center">
+                                    Arif Havas Oegroseno, S.H., LL.M
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-2 mx-2">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{asset('img/civic-edu/narsum/26.png')}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-center">
+                                    Eep Saefulloh Fatah
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-2 mx-2">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{asset('img/civic-edu/narsum/27.png')}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-center">
+                                    Dr. Ir. Pramono Anung Wibowo, M.M.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -236,7 +516,7 @@
 
                     <div class="quote" data-aos="fade-up" data-aos-delay="200"></div>
 
-                    <h2 class="mb-4" data-aos="fade-up" data-aos-delay="300">Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo.</h2>
+                    <h2 class="mb-2 mx-2" data-aos="fade-up" data-aos-delay="300">Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo.</h2>
 
                     <p data-aos="fade-up" data-aos-delay="400">
                         <strong>Mary Zoe</strong>
@@ -265,13 +545,13 @@
                     <h4 class="my-4">Contact Info</h4>
 
                     <p class="mb-1">
-                        <i class="fa fa-phone mr-2 footer-icon"></i>
+                        <!-- <i class="fa fa-phone mr-2 footer-icon"></i> -->
                         <!-- +99 080 070 4224 -->
                     </p>
 
                     <p>
                         <a href="#">
-                            <i class="fa fa-envelope mr-2 footer-icon"></i>
+                            <!-- <i class="fa fa-envelope mr-2 footer-icon"></i> -->
                             instituthijauindonesiahi@gmail.com
                         </a>
                     </p>
@@ -281,7 +561,7 @@
                     <h4 class="my-4">Kantor Kami</h4>
 
                     <p class="mb-1">
-                        <i class="fa fa-home mr-2 footer-icon"></i>
+                        <!-- <i class="fas fa-home mr-2 footer-icon"></i> -->
                         Gedung Manggala Wanabakti Blok IV lantai 7, Wing C
                     </p>
                 </div>
@@ -302,14 +582,14 @@
                     </ul>
                 </div>
 
-                <div class="col-lg-3 mx-lg-auto col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
+                <!-- <div class="col-lg-3 mx-lg-auto col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
                     <ul class="social-icon">
                         <li><a href="#" class="fa fa-instagram"></a></li>
                         <li><a href="#" class="fa fa-twitter"></a></li>
                         <li><a href="#" class="fa fa-dribbble"></a></li>
                         <li><a href="#" class="fa fa-behance"></a></li>
                     </ul>
-                </div>
+                </div> -->
 
             </div>
         </div>
@@ -317,13 +597,19 @@
 
 
     <!-- SCRIPTS -->
-    <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
-    <script src="{{asset('vendor/boostrap/js/bootstrap.min.js')}}"></script>
+    <!-- <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script> -->
+    <!-- <script src="{{asset('vendor/boostrap/js/bootstrap.min.js')}}"></script>
     <script src="{{asset('vendor/aos/aos.js')}}"></script>
     <script src="{{asset('vendor/owl/owl.carousel.min.js')}}"></script>
     <script src="{{asset('js/smoothscroll.js')}}"></script>
-    <script src="{{asset('js/custom2.js')}}"></script>
+    <script src="{{asset('js/custom2.js')}}"></script> -->
 
+    <script src="{{asset('css/templatemo/js/jquery.min.js')}}"></script>
+    <script src="{{asset('css/templatemo/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('css/templatemo/js/aos.js')}}"></script>
+    <script src="{{asset('css/templatemo/js/owl.carousel.min.js')}}"></script>
+    <script src="{{asset('css/templatemo/js/smoothscroll.js')}}"></script>
+    <script src="{{asset('css/templatemo/js/custom2.js')}}"></script>
 </body>
 
 </html>
