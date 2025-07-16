@@ -26,7 +26,7 @@
 
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800"><b>Berita Institut Hijau Indonesia</b></h1>
-                        <a href="{{route('tampilFormTambah')}}" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm"><i class="fas fa-plus fa-sm text-white-50"></i> Tambah Berita</a>
+                        <a href="{{route('tampilFormTambah')}}" class="btn btn-sm btn-success shadow-sm"><i class="fas fa-plus fa-sm text-white-50"></i> Tambah Berita</a>
                     </div>
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">

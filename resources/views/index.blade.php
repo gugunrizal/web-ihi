@@ -3,7 +3,7 @@
 <main class="main">
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section">
+    <section id="hero" class="hero section bg">
         <div class="container" data-aos="fade-up" data-aos-delay="100">
 
             <div class="row align-items-center mb-5">
@@ -95,7 +95,7 @@
                     <div class="row">
                         <div class="col-12 col-md-6">
                             <div class="process-item" data-aos="fade-up" data-aos-delay="200">
-                                <a href="#">
+                                <a href="{{route('tampilGreenLeader')}}">
                                     <div class="content">
                                         <span class="step-number">01</span>
                                         <div class="card-body">

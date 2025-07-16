@@ -28,9 +28,36 @@
     <!-- Main CSS File -->
     <link href="{{asset('css/main.css')}}" rel="stylesheet">
 
+    <style>
+        /* .bg {
+            background: url('{{asset("img/bg.JPG")}}');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        } */
+        /* body {
+            height: 100vh;
+            background-image: url('{{asset("img/bg.JPG")}}');
+            background-size: 120% 120%;
+            background-position: center center;
+            animation: shrink 5s infinite alternate;
+            background-repeat: no-repeat;
+        }
+
+        @keyframes shrink {
+            0% {
+                background-size: 120% 120%;
+            }
+
+            100% {
+                background-size: 100% 100%;
+            }
+        } */
+    </style>
+
 </head>
 
-<body class="index-page">
+<body class="index-page bg">
 
     @include('template.header')
 

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\CivicController;
+use App\Http\Controllers\LeaderController;
 use App\Http\Controllers\UserController;
 use Illuminate\Routing\RouteRegistrar;
 use Illuminate\Support\Facades\Route;
@@ -34,3 +35,6 @@ Route::get('/admin/berita/{id}/hapus', [BeritaController::class, 'hapusBerita'])
 // civic edu
 Route::get('/civic-edu', [CivicController::class, 'tampil'])->name('tampilCivic');
 // Route::get('/')
+
+// green leader
+Route::get('/green-leader', [LeaderController::class, 'tampil'])->name('tampilGreenLeader');

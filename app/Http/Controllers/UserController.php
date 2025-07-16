@@ -18,7 +18,7 @@ class UserController extends Controller
         $berita = Berita::select('*')
             ->where('status', 'publish')
             ->orderBy('created_at', 'desc')
-            ->limit(1)
+            ->limit(6)
             ->get();
         return view('index', ['berita' => $berita]);
     }

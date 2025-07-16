@@ -3024,3 +3024,7 @@ section,
 .beritaTengah {
   justify-content: center;
 }
+
+.hero-bg {
+  background: url("{{asset('img/bg.JPG')}}");
+}
