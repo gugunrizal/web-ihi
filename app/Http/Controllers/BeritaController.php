@@ -40,7 +40,8 @@ class BeritaController extends Controller
             'ringkasan_berita' => $request->ringkasan,
             'isi_berita' => $request->isi,
             'status' => $request->status,
-            'gambar_berita' => $file
+            'gambar_berita' => $file,
+            'kategori' => $request->kategori
         ]);
         // dd($data);
 

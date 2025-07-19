@@ -27,6 +27,16 @@
             <form action="{{route('editBerita', $b->id)}}" class="form-group" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
+                    <label for="kategori" class="form-label">Kategori Berita</label>
+                    <select class="form-select form-control form-control-sm" aria-label="Default select example" name="kategori" id="kategori">
+                        <option selected>Pilih Kategori</option>
+                        <option value="GROW">GROW</option>
+                        <option value="GLI">GLI</option>
+                        <option value="CIVIC">CIVIC</option>
+                        <option value="SUAR">SUAR</option>
+                    </select>
+                </div>
+                <div class="mb-3">
                     <label for="judul" class="form-label">Judul Berita</label>
                     <input type="text" name="judul" class="form-control form-control-sm" id="judul" value="{{$b->judul}}">
                 </div>

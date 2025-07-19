@@ -35,9 +35,10 @@
             background-position: center;
             background-repeat: no-repeat;
         } */
-        /* body {
+
+        .backgroundAwal {
             height: 100vh;
-            background-image: url('{{asset("img/bg.JPG")}}');
+            /* background-image: url('{{asset("img/bg.JPG")}}'); */
             background-size: 120% 120%;
             background-position: center center;
             animation: shrink 5s infinite alternate;
@@ -52,7 +53,14 @@
             100% {
                 background-size: 100% 100%;
             }
-        } */
+        }
+
+        .carousel-caption {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     </style>
 
 </head>

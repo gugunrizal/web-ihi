@@ -42,7 +42,7 @@
                                             <th>Judul Berita</th>
                                             <th>Penulis</th>
                                             <th>Tanggal Rilis</th>
-                                            <th>Slug</th>
+                                            <th>Kategori</th>
                                             <th>Status</th>
                                             <th>Gambar</th>
                                             <th colspan="2">Aksi</th>
@@ -54,7 +54,7 @@
                                             <th>Judul Berita</th>
                                             <th>Penulis</th>
                                             <th>Tanggal Rilis</th>
-                                            <th>Slug</th>
+                                            <th>Kategori</th>
                                             <th>Status</th>
                                             <th>Gambar</th>
                                             <th colspan="2">Aksi</th>
@@ -68,7 +68,7 @@
                                             <td>{{$b->judul}}</td>
                                             <td>{{$b->penulis}}</td>
                                             <td>{{$b->tanggal_rilis}}</td>
-                                            <td>{{$b->slug}}</td>
+                                            <td>{{$b->kategori}}</td>
                                             <td>{{$b->status}}</td>
                                             <td>
                                                 <img src="{{asset('storage/'.$b->gambar_berita)}}" alt="" width="100px">

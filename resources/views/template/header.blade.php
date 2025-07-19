@@ -13,7 +13,7 @@
                 <li><a href="#about" class="">Tentang Kami</a></li>
                 <li><a href="#how-we-work" class="">Program Kami</a></li>
                 <li><a href="#team" class="">Tim</a></li>
-                <li><a href="#portfolio" class="">Portfolio</a></li>
+                <li><a href="#portfolio" class="">Galeri</a></li>
                 <li><a href="#blog" class="">Blog</a></li>
                 <li><a href="#contact" class="">Kontak Kami</a></li>
             </ul>

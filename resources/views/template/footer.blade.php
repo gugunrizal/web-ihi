@@ -7,8 +7,7 @@
                     <span class="sitename">Institut Hijau Indonesia</span>
                 </a>
                 <div class="footer-contact pt-3">
-                    <p>Gedung Manggala Wanabakti
-                        Blok IV lantai 7, Wing C</p>
+                    <p>Jl. Palapa XVII No.3 11, RT.11/RW.5, Ps. Minggu, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12520</p>
                     <!-- <p class="mt-3"><strong>Phone:</strong> <span>+62 812345678</span></p> -->
                     <p><strong>Email:</strong>
                         <span>
