@@ -74,7 +74,7 @@
     <!-- /Hero Section -->
 
     <!-- About Section -->
-    <section id="about" class="about section">
+    <section id="about" class="about section light-background">
 
         <div class="container">
 
@@ -465,7 +465,7 @@
     <!-- /Portfolio Section -->
 
     <!-- Blog Section -->
-    <section id="blog" class="portfolio section">
+    <section id="blog" class="portfolio section light-background">
 
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">

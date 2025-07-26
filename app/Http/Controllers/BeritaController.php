@@ -29,7 +29,8 @@ class BeritaController extends Controller
         $nama_file = time() . "_" . $request->gambar->getClientOriginalName();
         $file = $request->gambar->storeAs('gambar_berita', $nama_file, 'public');
         // $request->gambar->move(public_path('/img/foto_berita'), $nama_file);
-
+        $berita = $request->isi;
+        $isi = htmlspecialchars($berita, ENT_QUOTES, 'UTF-8');
         $slug = Str::slug($request->judul);
 
         Berita::create([
@@ -38,7 +39,7 @@ class BeritaController extends Controller
             'tanggal_rilis' => $request->tanggal_rilis,
             'slug' => $slug,
             'ringkasan_berita' => $request->ringkasan,
-            'isi_berita' => $request->isi,
+            'isi_berita' => $isi,
             'status' => $request->status,
             'gambar_berita' => $file,
             'kategori' => $request->kategori

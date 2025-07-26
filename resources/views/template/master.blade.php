@@ -5,8 +5,13 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Institut Hijau Indonesia</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="Di bawah Yayasan Peradaban Hijau Indonesia, Institut Hijau Indonesia menjadi wadah untuk menuju peradaban Hijau Indonesia yang lebih adil dan lestari.">
+    <meta name="description" content="Web dan Berita Institut Hijau Indonesia">
+    <meta property="og:title" content="Institut Hijau Indonesia | Social and Ecological Justice">
+    <meta property="og:url" content="https://instituthijauindonesia.or.id">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Institut Hijau Indonesia">
+
 
     <!-- Favicons -->
     <link href="{{asset('img/logo-ihi.png')}}" rel="icon">
