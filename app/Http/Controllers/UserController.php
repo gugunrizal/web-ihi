@@ -34,8 +34,12 @@ class UserController extends Controller
         $berita = Berita::select('*')
             ->where('id', $id)
             ->get();
-
-        return view('tampilBerita', ['berita' => $berita]);
+        // $berita = html_entity_decode($berita);
+        // $berita = strip_tags($berita);
+        // $allowedTags = '<p><a><strong><em><ul><ol><li><h1><h2><h3><h4><h5><h6><div><span><br><hr><img><table><tr><td><th>';
+        // $berita = strip_tags(htmlspecialchars_decode($berita), $allowedTags);
+        // return 
+        return view('tampilBerita', compact('berita'));
     }
 
     public function tampilTim()

@@ -1,5 +1,5 @@
 @extends('admin.master')
-@section('title', 'IHI | Tambah Berita')
+@section('title', 'IHI | Edit Berita')
 @section('content')
 <div id="content-wrapper" class="d-flex flex-column">
 

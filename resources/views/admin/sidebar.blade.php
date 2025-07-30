@@ -31,6 +31,11 @@
             <i class="fas fa-book"></i>
             <span>Berita</span></a>
     </li>
+    <li class="nav-item {{ (request()->is('admin/berita/foto/tampilFotoBerita')) ? 'active' : '' }}">
+        <a class="nav-link" href="{{route('tampilFotoBerita')}}">
+            <i class="fas fa-book"></i>
+            <span>Foto Berita</span></a>
+    </li>
 
     <!-- Nav Item - Utilities Collapse Menu -->
     <li class="nav-item">

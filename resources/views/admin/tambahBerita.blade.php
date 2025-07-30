@@ -56,7 +56,11 @@
                 </div>
                 <div class="mb-3">
                     <label for="isi" class="form-label">Isi Berita</label>
-                    <textarea class="form-control form-control-sm" name="isi" id="isi" rows="3"></textarea>
+                    <textarea class="konten" name="isi" id="konten"></textarea>
+                    <script>
+                        // Inisialisasi CKEditor pada textarea dengan id 'konten'
+                        CKEDITOR.replace('konten');
+                    </script>
                 </div>
                 <div class="mb-3">
                     <label for="gambar" class="form-label">Gambar Berita</label>

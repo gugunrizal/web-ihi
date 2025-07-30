@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Berita;
+use App\Models\FotoBerita;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -30,7 +31,7 @@ class BeritaController extends Controller
         $file = $request->gambar->storeAs('gambar_berita', $nama_file, 'public');
         // $request->gambar->move(public_path('/img/foto_berita'), $nama_file);
         $berita = $request->isi;
-        $isi = htmlspecialchars($berita, ENT_QUOTES, 'UTF-8');
+        // $isi = htmlspecialchars($berita, ENT_QUOTES, 'UTF-8');
         $slug = Str::slug($request->judul);
 
         Berita::create([
@@ -39,7 +40,7 @@ class BeritaController extends Controller
             'tanggal_rilis' => $request->tanggal_rilis,
             'slug' => $slug,
             'ringkasan_berita' => $request->ringkasan,
-            'isi_berita' => $isi,
+            'isi_berita' => $berita,
             'status' => $request->status,
             'gambar_berita' => $file,
             'kategori' => $request->kategori
@@ -88,5 +89,34 @@ class BeritaController extends Controller
         Berita::where('id', $request->id)->delete();
 
         return redirect()->route('tampilBerita');
+    }
+
+    public function tampilFotoBerita()
+    {
+        $fotoBerita = FotoBerita::select('*')->get();
+        return view('admin.fotoBerita', compact('fotoBerita'));
+        // return view('admin.fotoBerita', ['foto_berita' => $fotoBerita]);
+    }
+
+    public function tampilFormTambahFoto()
+    {
+        return view('admin.tambahFotoBerita');
+    }
+
+    public function tambahFotoBerita(Request $request)
+    {
+        $request->validate([
+            'gambar' => 'required|file|image|mimes:jpeg,png,jpg|max:2048'
+        ]);
+
+        $nama_file = time() . "_" . $request->gambar->getClientOriginalName();
+        $file = $request->gambar->storeAs('gambar_berita', $nama_file, 'public');
+
+        FotoBerita::create([
+            'deskripsi' => $request->deskripsi,
+            'gambar' => $file
+        ]);
+
+        return redirect()->route('tampilFotoBerita')->with('success', 'Berhasil Berhasil disimpan');
     }
 }

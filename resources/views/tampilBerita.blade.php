@@ -74,8 +74,7 @@
                     <div class="text-center mb-5">
                         <img src="{{asset('storage/'.$b->gambar_berita)}}" alt="" class="img-fluid">
                     </div>
-                    <p>{{$b->isi_berita}}</p>
-
+                    <div><?= htmlspecialchars_decode($b->isi_berita); ?></div>
                 </div>
                 @endforeach
             </div>
