@@ -159,95 +159,15 @@
             </div>
 
             <div class="container section-title" data-aos="fade-up" style="padding-top: 50px;">
-                <p>Project Officer Institut Hijau Indonesia</p>
+                <h2>Struktur Organisasi Insitut Hijau Indonesia</h2>
             </div>
             <div class="container" data-aos="fade-up" data-aos-delay="100">
 
                 <div class="row g-5">
 
-                    <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="team-card">
-                            <div class="team-image">
-                                <img src="img/santri.png" class="img-fluid" alt="">
-                                <div class="team-overlay">
-                                    <p>Institut Hijau Indonesia</p>
-                                    <div class="team-social">
-                                        <a href=""><i class="bi bi-twitter-x"></i></a>
-                                        <a href=""><i class="bi bi-facebook"></i></a>
-                                        <a href=""><i class="bi bi-instagram"></i></a>
-                                        <a href=""><i class="bi bi-linkedin"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="team-content">
-                                <h4>Anonym</h4>
-                                <span class="position">Project Officer finance</span>
-                            </div>
-                        </div>
-                    </div><!-- End Team Member -->
-
-                    <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="team-card">
-                            <div class="team-image">
-                                <img src="img/santri.png" class="img-fluid" alt="">
-                                <div class="team-overlay">
-                                    <p>Institut Hijau Indonesia</p>
-                                    <div class="team-social">
-                                        <a href=""><i class="bi bi-twitter-x"></i></a>
-                                        <a href=""><i class="bi bi-facebook"></i></a>
-                                        <a href=""><i class="bi bi-instagram"></i></a>
-                                        <a href=""><i class="bi bi-linkedin"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="team-content">
-                                <h4>Anonym</h4>
-                                <span class="position">Projet Officer Media</span>
-                            </div>
-                        </div>
-                    </div><!-- End Team Member -->
-
-                    <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="team-card">
-                            <div class="team-image">
-                                <img src="img/santri.png" class="img-fluid" alt="">
-                                <div class="team-overlay">
-                                    <p>Institut Hijau Indonesia</p>
-                                    <div class="team-social">
-                                        <a href=""><i class="bi bi-twitter-x"></i></a>
-                                        <a href=""><i class="bi bi-facebook"></i></a>
-                                        <a href=""><i class="bi bi-instagram"></i></a>
-                                        <a href=""><i class="bi bi-linkedin"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="team-content">
-                                <h4>Anonym</h4>
-                                <span class="position">Projet Officer Administrasi</span>
-                            </div>
-                        </div>
-                    </div><!-- End Team Member -->
-
-                    <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
-                        <div class="team-card">
-                            <div class="team-image">
-                                <img src="img/santri.png" class="img-fluid" alt="">
-                                <div class="team-overlay">
-                                    <p>Institut Hijau Indonesia</p>
-                                    <div class="team-social">
-                                        <a href=""><i class="bi bi-twitter-x"></i></a>
-                                        <a href=""><i class="bi bi-facebook"></i></a>
-                                        <a href=""><i class="bi bi-instagram"></i></a>
-                                        <a href=""><i class="bi bi-linkedin"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="team-content">
-                                <h4>Anonym</h4>
-                                <span class="position">Project Officer Program</span>
-                            </div>
-                        </div>
-                    </div><!-- End Team Member -->
+                    <div class="col-12" data-aos="fade-up" data-aos-delay="400">
+                        <img src="{{asset('img/tim-ihi.png')}}" alt="Tim Ihi" class="img-fluid">
+                    </div>
 
                 </div>
 

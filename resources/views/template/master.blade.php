@@ -60,11 +60,49 @@
             }
         }
 
-        .carousel-caption {
+        /* .carousel-caption {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+        } */
+
+        .carousel-caption {
+            bottom: 40%;
+            left: 5%;
+            right: 5%;
+            text-align: center;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            white-space: normal;
+            /* background: rgba(0, 0, 0, 0.3); */
+            /* semi-transparan biar teks lebih terbaca */
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .carousel-caption h1,
+        .carousel-caption p {
+            color: #fff;
+            font-size: clamp(14px, 3vw, 28px);
+            /* Responsive font size */
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .carousel-caption {
+                bottom: 10%;
+                padding: 8px;
+            }
+
+
+            .carousel-caption h1 {
+                font-size: 25px;
+            }
+
+            .carousel-caption p {
+                font-size: 13px;
+            }
         }
     </style>
 

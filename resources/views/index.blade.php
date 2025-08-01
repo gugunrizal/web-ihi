@@ -6,26 +6,22 @@
     <section id="hero" class="hero section">
         <div id="carouselExample" class="carousel slide">
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="carousel-caption">
-                        <h1 class="text-white" data-aos="fade-up" data-aos-delay="100">INSTITUT HIJAU INDONESIA</h1>
-                        <p data-aos="fade-up" data-aos-delay="100"
-                            style="background-color: white; color: black; border-radius: 10px;">
-                            Social and Ecological Justice
-                        </p>
-                    </div>
-                    <video class="img-fluid" autoplay loop muted>
+                <div class="carousel-item active position-relative">
+                    <video class="img-fluid w-100" autoplay loop muted>
                         <source src="https://mdbcdn.b-cdn.net/img/video/Tropical.mp4" type="video/mp4" />
                     </video>
+                    <div class="carousel-caption">
+                        <div data-aos="fade-up" data-aos-delay="100">
+                            <h1 class="text-white">INSTITUT HIJAU INDONESIA</h1>
+                            <p style="background-color: white; color: black; border-radius: 10px; padding: 3px;">
+                                Social and Ecological Justice
+                            </p>
+                            <p>
+                                Di bawah Yayasan Peradaban Hijau Indonesia, Institut Hijau Indonesia menjadi wadah untuk menuju peradaban Hijau Indonesia yang lebih adil dan lestari.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <video class="img-fluid" autoplay loop muted>
-                        <source src="https://mdbcdn.b-cdn.net/img/video/forest.mp4" type="video/mp4" />
-                    </video>
-                </div>
-                <!-- <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="...">
-                </div> -->
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
