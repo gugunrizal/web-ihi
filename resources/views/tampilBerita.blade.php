@@ -45,7 +45,7 @@
                     <li><a href="{{route('home')}}" class="">Tentang Kami</a></li>
                     <li><a href="{{route('home')}}" class="">Program Kami</a></li>
                     <li><a href="{{route('home')}}" class="">Tim</a></li>
-                    <li><a href="{{route('home')}}" class="">Portfolio</a></li>
+                    <li><a href="{{route('home')}}" class="">Galeri</a></li>
                     <li><a href="{{route('home')}}" class="active">Blog</a></li>
                     <li><a href="{{route('home')}}" class="">Kontak Kami</a></li>
                 </ul>
@@ -63,16 +63,18 @@
 
                 @foreach ($berita as $b)
                 <div class="container section-title" data-aos="fade-up">
-                    <h2>{{$b->judul}}</h2>
-                    <p>{{$b->ringkasan_berita}}</p>
+                    <h3>{{$b->judul}}</h3>
+                    <p>
+                        Ditulis oleh {{$b->penulis}} | {{$b->tanggal_rilis}} | {{$b->kategori}}
+                    </p>
+                    <!-- <p>{{$b->ringkasan_berita}}</p> -->
                 </div><!-- End Section Title -->
 
                 <div class="container" data-aos="fade-up" data-aos-delay="100">
-                    <div class="text-center">
-                        <img src="{{asset('storage/'.$b->gambar_berita)}}" alt="" width="200px">
+                    <div class="text-center mb-5">
+                        <img src="{{asset('storage/'.$b->gambar_berita)}}" alt="" class="img-fluid">
                     </div>
-                    <p>{{$b->isi_berita}}</p>
-
+                    <div><?= htmlspecialchars_decode($b->isi_berita); ?></div>
                 </div>
                 @endforeach
             </div>

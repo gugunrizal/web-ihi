@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\CivicController;
+use App\Http\Controllers\LeaderController;
 use App\Http\Controllers\UserController;
 use Illuminate\Routing\RouteRegistrar;
 use Illuminate\Support\Facades\Route;
@@ -31,6 +32,14 @@ Route::get('/admin/berita/{id}', [BeritaController::class, 'tampilFormEdit'])->n
 Route::post('/admin/berita/{id}/edit', [BeritaController::class, 'editBerita'])->name('editBerita')->middleware('auth');
 Route::get('/admin/berita/{id}/hapus', [BeritaController::class, 'hapusBerita'])->name('hapusBerita')->middleware('auth');
 
+// foto berita
+Route::get('/admin/berita/foto/tampilFotoBerita', [BeritaController::class, 'tampilFotoBerita'])->name('tampilFotoBerita');
+Route::get('/admin/berita/foto/tampilFormTambahFoto', [BeritaController::class, 'tampilFormTambahFoto'])->name('tampilFormTambahFoto');
+Route::post('/admin/berita/foto/tambahFoto', [BeritaController::class, 'tambahFotoBerita'])->name('tambahFotoBerita');
+
 // civic edu
 Route::get('/civic-edu', [CivicController::class, 'tampil'])->name('tampilCivic');
 // Route::get('/')
+
+// green leader
+Route::get('/green-leader', [LeaderController::class, 'tampil'])->name('tampilGreenLeader');

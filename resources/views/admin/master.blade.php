@@ -21,6 +21,14 @@
     <!-- Custom styles for this template-->
     <link href="{{asset('css/sb-admin-2.min.css')}}" rel="stylesheet">
     <link href="{{asset('vendor/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
+    <!-- <link href="{{asset('css/ckeditor5.css')}}" rel="stylesheet"> -->
+    <!-- <link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/46.0.0/ckeditor5.css" />
+    <script src="https://cdn.ckeditor.com/ckeditor5/46.0.0/ckeditor5.umd.js"></script> -->
+    <!-- Add if you use premium features. -->
+    <!-- <link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5-premium-features/46.0.0/ckeditor5-premium-features.css" />
+    <script src="https://cdn.ckeditor.com/ckeditor5-premium-features/46.0.0/ckeditor5-premium-features.umd.js"></script> -->
+
+    <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
 
 </head>
 
@@ -87,6 +95,32 @@
 
     <!-- Page level custom scripts -->
     <script src="{{asset('js/demo/datatables-demo.js')}}"></script>
+    <!-- <script>
+        const {
+            ClassicEditor,
+            Essentials,
+            Bold,
+            Italic,
+            Font,
+            Paragraph
+        } = CKEDITOR;
+        const {
+            FormatPainter
+        } = CKEDITOR_PREMIUM_FEATURES;
+
+        ClassicEditor
+            .create(document.querySelector('#editor'), {
+                licenseKey: '<YOUR_LICENSE_KEY>',
+                plugins: [Essentials, Bold, Italic, Font, Paragraph, FormatPainter],
+                toolbar: [
+                    'undo', 'redo', '|', 'bold', 'italic', '|',
+                    'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor', '|',
+                    'formatPainter'
+                ]
+            })
+            .then( /* ... */ )
+            .catch( /* ... */ );
+    </script> -->
 
 </body>
 

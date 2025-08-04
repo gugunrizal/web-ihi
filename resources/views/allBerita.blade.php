@@ -45,7 +45,7 @@
                     <li><a href="{{route('home')}}" class="">Tentang Kami</a></li>
                     <li><a href="{{route('home')}}" class="">Program Kami</a></li>
                     <li><a href="{{route('home')}}" class="">Tim</a></li>
-                    <li><a href="{{route('home')}}" class="">Portfolio</a></li>
+                    <li><a href="{{route('home')}}" class="">Galeri</a></li>
                     <li><a href="{{route('home')}}" class="active">Blog</a></li>
                     <li><a href="{{route('home')}}" class="">Kontak Kami</a></li>
                 </ul>

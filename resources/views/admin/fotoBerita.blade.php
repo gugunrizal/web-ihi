@@ -1,5 +1,5 @@
 @extends('admin.master')
-@section('title', 'IHI | Berita')
+@section('title', 'IHI | Foto Berita')
 @section('content')
 <div id="content-wrapper" class="d-flex flex-column">
 
@@ -25,8 +25,8 @@
                 <div class="container-fluid">
 
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800"><b>Berita Institut Hijau Indonesia</b></h1>
-                        <a href="{{route('tampilFormTambah')}}" class="btn btn-sm btn-success shadow-sm"><i class="fas fa-plus fa-sm text-white-50"></i> Tambah Berita</a>
+                        <h1 class="h3 mb-0 text-gray-800"><b>Foto Berita Institut Hijau Indonesia</b></h1>
+                        <a href="{{route('tampilFormTambahFoto')}}" class="btn btn-sm btn-success shadow-sm"><i class="fas fa-plus fa-sm text-white-50"></i> Tambah Foto Berita</a>
                     </div>
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
@@ -39,51 +39,30 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Judul Berita</th>
-                                            <th>Penulis</th>
-                                            <th>Tanggal Rilis</th>
-                                            <th>Kategori</th>
-                                            <th>Status</th>
+                                            <th>Deskripsi Foto</th>
                                             <th>Gambar</th>
-                                            <th colspan="2">Aksi</th>
+                                            <th>Link</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
                                             <th>No</th>
-                                            <th>Judul Berita</th>
-                                            <th>Penulis</th>
-                                            <th>Tanggal Rilis</th>
-                                            <th>Kategori</th>
-                                            <th>Status</th>
+                                            <th>Deskripsi Foto</th>
                                             <th>Gambar</th>
-                                            <th colspan="2">Aksi</th>
+                                            <th>Link</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
                                         <?php $no = 1 ?>
-                                        @foreach ($berita as $b)
+                                        @foreach ($fotoBerita as $d)
                                         <tr>
                                             <td>{{$no++}}</td>
-                                            <td>{{$b->judul}}</td>
-                                            <td>{{$b->penulis}}</td>
-                                            <td>{{$b->tanggal_rilis}}</td>
-                                            <td>{{$b->kategori}}</td>
-                                            <td>{{$b->status}}</td>
+                                            <td>{{$d->deskripsi}}</td>
                                             <td>
-                                                <img src="{{asset('storage/'.$b->gambar_berita)}}" alt="" width="100px">
+                                                <img src="{{asset('storage/'.$d->gambar)}}" alt="" width="100px">
                                             </td>
                                             <td>
-                                                <a href="{{route('hapusBerita', $b->id)}}" onclick="return confirm('Apakah Yakin?')" class="btn btn-danger btn-sm">
-                                                    <i class="fas fa-trash"></i>
-                                                    Hapus
-                                                </a>
-                                            </td>
-                                            <td>
-                                                <a href="{{route('tampilFormEdit', $b->id)}}" class="btn btn-primary btn-sm">
-                                                    <i class="fas fa-edit"></i>
-                                                    Edit
-                                                </a>
+                                                <?= url('/storage') . '/' . $d->gambar ?>
                                             </td>
                                         </tr>
                                         @endforeach

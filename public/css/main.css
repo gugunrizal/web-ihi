@@ -63,7 +63,7 @@
 --------------------------------------------------------------*/
 body {
   color: var(--default-color);
-  background-color: var(--background-color);
+  /* background-color: var(--background-color); */
   font-family: var(--default-font);
 }
 
@@ -783,12 +783,11 @@ section,
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
-  padding-top: 140px;
   position: relative;
   overflow: hidden;
   background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
   /* background: url('img/bg.mp4'); */
-  padding-bottom: 80px;
+  /* padding-bottom: 80px; */
 }
 
 .hero .badge-wrapper .d-inline-flex {
@@ -3023,4 +3022,8 @@ section,
 
 .beritaTengah {
   justify-content: center;
+}
+
+.hero-bg {
+  background: url("{{asset('img/bg.JPG')}}");
 }

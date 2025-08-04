@@ -16,6 +16,7 @@ class Berita extends Model
         'isi_berita',
         'ringkasan_berita',
         'gambar_berita',
-        'status'
+        'status',
+        'kategori'
     ];
 }

@@ -4,11 +4,43 @@
 
     <!-- Hero Section -->
     <section id="hero" class="hero section">
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active position-relative">
+                    <video class="img-fluid w-100" autoplay loop muted>
+                        <source src="https://mdbcdn.b-cdn.net/img/video/Tropical.mp4" type="video/mp4" />
+                    </video>
+                    <div class="carousel-caption">
+                        <div data-aos="fade-up" data-aos-delay="100">
+                            <h1 class="text-white">INSTITUT HIJAU INDONESIA</h1>
+                            <p style="background-color: white; color: black; border-radius: 10px; padding: 3px;">
+                                Social and Ecological Justice
+                            </p>
+                            <p>
+                                Di bawah Yayasan Peradaban Hijau Indonesia, Institut Hijau Indonesia menjadi wadah untuk menuju peradaban Hijau Indonesia yang lebih adil dan lestari.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!-- <div class="container" data-aos="fade-up" data-aos-delay="100"> -->
 
-            <div class="row align-items-center mb-5">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <div class="badge-wrapper mb-3">
+        <!-- <div class="row align-items-center mb-5" style="min-height: 400px;"> -->
+        <!-- <div class="col mb-4 mb-lg-0"> -->
+
+        <!-- <h1 class="text-center text-white" style="font-size: 60px;">
+                        INSTITUT HIJAU INDONESIA
+                    </h1> -->
+        <!-- <div class="badge-wrapper mb-3">
                         <div class="d-inline-flex align-items-center rounded-pill border border-accent-light">
                             <div class="icon-circle me-2">
                                 <i class="bi bi-bell"></i>
@@ -30,15 +62,15 @@
                     <div class="hero-image">
                         <img src="img/main-logo.png" alt="Business Growth" class="img-fluid" loading="lazy">
                     </div>
-                </div>
-            </div>
-        </div>
+                </div> -->
+        <!-- </div> -->
+        <!-- </div> -->
 
     </section>
     <!-- /Hero Section -->
 
     <!-- About Section -->
-    <section id="about" class="about section">
+    <section id="about" class="about section light-background">
 
         <div class="container">
 
@@ -95,7 +127,7 @@
                     <div class="row">
                         <div class="col-12 col-md-6">
                             <div class="process-item" data-aos="fade-up" data-aos-delay="200">
-                                <a href="#">
+                                <a href="{{route('tampilGreenLeader')}}">
                                     <div class="content">
                                         <span class="step-number">01</span>
                                         <div class="card-body">
@@ -324,70 +356,100 @@
 
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-            <h2>Portfolio</h2>
+            <h2>Galeri</h2>
             <p>Dokumentasi Kegiatan yang diselenggarakan Institut Hijau Indonesia</p>
         </div><!-- End Section Title -->
 
         <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-            <div class="row justify-content-center">
-                <div class="col-12 col-md-6 mb-4">
-                    <div class="card" style="width: 18rem;">
-                        <img src="{{asset('img/portfolio/gli1.JPG')}}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text text-center">
-                                Green Leadership Indonesia
-                            </p>
+            <div class="row justify-content-center portfolio-content">
+                <div class="col-12 col-md-3 mb-4">
+                    <div class="portfolio-card beritaTengah mx-auto ">
+                        <div class="portfolio-image beritaTengah mx-auto ">
+                            <img src="{{asset('img/portfolio/gli1.JPG')}}" class="img-fluid" alt="" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-actions">
+                                    <a href="{{asset('img/portfolio/gli1.JPG')}}" class="glightbox preview-link" data-gallery="portfolio-gallery-web"><i class="bi bi-eye"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content text-center">
+                            <p>Green Leadership Indonesia</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-3 mb-4">
-                    <div class="card" style="width: 18rem;">
-                        <img src="{{asset('img/portfolio/gli2.JPG')}}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text text-center">
-                                Green Leadership Indonesia
-                            </p>
+                    <div class="portfolio-card beritaTengah mx-auto ">
+                        <div class="portfolio-image beritaTengah mx-auto ">
+                            <img src="{{asset('img/portfolio/gli2.JPG')}}" class="img-fluid" alt="" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-actions">
+                                    <a href="{{asset('img/portfolio/gli2.JPG')}}" class="glightbox preview-link" data-gallery="portfolio-gallery-web"><i class="bi bi-eye"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content text-center">
+                            <p>Green Leadership Indonesia</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-3 mb-4">
-                    <div class="card" style="width: 18rem;">
-                        <img src="{{asset('img/portfolio/gli3.JPG')}}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text text-center">
-                                Green Leadership Indonesia
-                            </p>
+                    <div class="portfolio-card beritaTengah mx-auto ">
+                        <div class="portfolio-image beritaTengah mx-auto ">
+                            <img src="{{asset('img/portfolio/gli3.JPG')}}" class="img-fluid" alt="" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-actions">
+                                    <a href="{{asset('img/portfolio/gli3.JPG')}}" class="glightbox preview-link" data-gallery="portfolio-gallery-web"><i class="bi bi-eye"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content text-center">
+                            <p>Green Leadership Indonesia</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-3 mb-4">
-                    <div class="card" style="width: 18rem;">
-                        <img src="{{asset('img/portfolio/gli4.png')}}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text text-center">
-                                Green Leadership Indonesia
-                            </p>
+                    <div class="portfolio-card beritaTengah mx-auto ">
+                        <div class="portfolio-image beritaTengah mx-auto ">
+                            <img src="{{asset('img/portfolio/gli4.png')}}" class="img-fluid" alt="" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-actions">
+                                    <a href="{{asset('img/portfolio/gli4.png')}}" class="glightbox preview-link" data-gallery="portfolio-gallery-web"><i class="bi bi-eye"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content text-center">
+                            <p>Green Leadership Indonesia</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-3 mb-4">
-                    <div class="card" style="width: 18rem;">
-                        <img src="{{asset('img/portfolio/gli5.png')}}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text text-center">
-                                Green Leadership Indonesia
-                            </p>
+                    <div class="portfolio-card beritaTengah mx-auto ">
+                        <div class="portfolio-image beritaTengah mx-auto ">
+                            <img src="{{asset('img/portfolio/gli5.png')}}" class="img-fluid" alt="" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-actions">
+                                    <a href="{{asset('img/portfolio/gli5.png')}}" class="glightbox preview-link" data-gallery="portfolio-gallery-web"><i class="bi bi-eye"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content text-center">
+                            <p>Green Leadership Indonesia</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-3 mb-4">
-                    <div class="card" style="width: 18rem;">
-                        <img src="{{asset('img/portfolio/gli6.png')}}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text text-center">
-                                Green Leadership Indonesia
-                            </p>
+                    <div class="portfolio-card beritaTengah mx-auto ">
+                        <div class="portfolio-image beritaTengah mx-auto ">
+                            <img src="{{asset('img/portfolio/gli6.png')}}" class="img-fluid" alt="" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-actions">
+                                    <a href="{{asset('img/portfolio/gli6.png')}}" class="glightbox preview-link" data-gallery="portfolio-gallery-web"><i class="bi bi-eye"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content text-center">
+                            <p>Green Leadership Indonesia</p>
                         </div>
                     </div>
                 </div>
@@ -399,7 +461,7 @@
     <!-- /Portfolio Section -->
 
     <!-- Blog Section -->
-    <section id="blog" class="portfolio section">
+    <section id="blog" class="portfolio section light-background">
 
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
@@ -473,7 +535,7 @@
                             <i class="bi bi-geo-alt"></i>
                         </div>
                         <h3>Alamat Kami</h3>
-                        <p>Gedung Manggala Wanabakti Blok IV lantai 7, Wing C</p>
+                        <p>Jl. Palapa XVII No.3 11, RT.11/RW.5, Ps. Minggu, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12520</p>
                     </div>
                 </div>
 
