@@ -55,7 +55,7 @@
                         <a href="{{route('home')}}" class="nav-link contact">Kembali</a>
                     </li>
                     <li class="nav-item">
-                        <a href="https://lmscivic.instituthijauindonesia.or.id/" class="nav-link contact">Login LMS</a>
+                        <a href="#" class="nav-link contact">Login LMS</a>
                     </li>
                 </ul>
             </div>
