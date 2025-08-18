@@ -83,7 +83,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--heading-color);
+  color: #000;
   font-family: var(--heading-font);
 }
 
@@ -2077,7 +2077,7 @@ section,
 }
 
 .recent-blog-postst .post-item .post-title {
-  color: var(--heading-color);
+  color: #000;
   font-size: 20px;
   font-weight: 700;
   transition: 0.3s;

@@ -34,7 +34,7 @@
   <header id="header" class="header d-flex align-items-center fixed-top" style="background-color: #088a08;">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
+      <a href="{{route('tampilGreenLeader')}}" class="logo d-flex align-items-center me-auto">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.webp" alt=""> -->
         <h1 class="sitename">Green Leadership Indonesia</h1>
@@ -140,36 +140,39 @@
 
         <div class="row gy-5 justify-content-center">
 
+          @foreach ($berita as $b)
           <div class="col-xl-4 col-md-6">
             <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="100">
 
+
               <div class="post-img position-relative overflow-hidden">
-                <img src="{{asset('img/civic-edu/narsum/1.png')}}" class="img-fluid" alt="">
-                <span class="post-date">December 12</span>
+                <img src="{{asset('/storage/'.$b->gambar_berita) }}" class="img-fluid" alt="">
+                <span class="post-date">{{$b->tanggal_rilis}}</span>
               </div>
 
               <div class="post-content d-flex flex-column">
 
-                <h3 class="post-title">Judul Berita</h3>
+                <h3 class="post-title">{{$b->judul}}</h3>
 
                 <div class="meta d-flex align-items-center">
                   <div class="d-flex align-items-center">
-                    <i class="bi bi-person"></i> <span class="ps-2">Julia Parker</span>
+                    <i class="bi bi-person"></i> <span class="ps-2">{{$b->penulis}}</span>
                   </div>
                   <span class="px-3 text-black-50">/</span>
                   <div class="d-flex align-items-center">
-                    <i class="bi bi-folder2"></i> <span class="ps-2">Politics</span>
+                    <i class="bi bi-folder2"></i> <span class="ps-2">{{$b->kategori}}</span>
                   </div>
                 </div>
 
                 <hr>
-
-                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+                <a href="#" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
 
               </div>
 
             </div>
           </div>
+          @endforeach
+
 
         </div>
 
