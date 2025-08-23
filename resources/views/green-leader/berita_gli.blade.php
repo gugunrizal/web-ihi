@@ -42,10 +42,10 @@
 
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="#hero" class="active">Home</a></li>
+                    <li><a href="#hero">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#speaker">Speaker</a></li>
-                    <li><a href="#recent-blog-postst">Blog</a></li>
+                    <li><a href="#recent-blog-postst" class="active">Blog</a></li>
                     <li><a href="#contact">Contact</a></li>
             </nav>
 
@@ -56,182 +56,125 @@
 
     <main class="main">
 
-        <!-- Hero Section -->
-        <section id="hero" class="hero section" style="background-color: #088a08;">
-
+        <!-- Page Title -->
+        <div class="page-title" data-aos="fade" style="padding-top: 100px;">
             <div class="container">
-                <div class="row gy-4">
-                    <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out">
-                        <h1 class="text-white">Green Leadership Indonesia</h1>
-                        <p class="text-white">Memfasilitasi Tumbuhnya Pemimpin dengan Perspektif Keadilan Sosial dan Ekologis</p>
-                        <div class="d-flex">
-                            <a href="#" class="btn-get-started">Login CMS</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
-                        <img src="{{asset('img/logo-program/Logo-GLI.png')}}" class="img-fluid animated" alt="">
-                    </div>
-                </div>
+                <nav class="breadcrumbs">
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="current">Blog Details</li>
+                    </ol>
+                </nav>
+                <h1>Blog Details</h1>
             </div>
+        </div><!-- End Page Title -->
 
-        </section>
-        <!-- /Hero Section -->
+        <div class="container">
+            <div class="row">
 
-        <!-- About Section -->
-        <section id="about" class="about section light-background">
+                <div class="col-lg-8">
 
-            <!-- Section Title -->
-            <div class="container section-title" data-aos="fade-up">
-                <h2>About Us</h2>
-            </div><!-- End Section Title -->
+                    <!-- Blog Details Section -->
+                    <section id="blog-details" class="blog-details section">
+                        <div class="container" data-aos="fade-up">
 
-            <div class="container">
+                            @foreach ($berita as $b)
 
-                <div class="row gy-4">
+                            <article class="article">
 
-                    <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
-                        <p>
-                            <strong>Institut Hijau Indonesia</strong> secara sungguh-sungguh ingin membangun peradaban hijau Indonesia. Di bawah Yayasan Peradaban Hijau Indonesia, Institut Hijau Indonesia menjadi wadah untuk menuju peradaban Hijau Indonesia yang lebih adil dan lestari.
-
-                        </p>
-                    </div>
-
-                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-                        <p>
-                            Program Edukasi dari Institut Hijau Indonesia untuk menumbuhkan kesadaran demokrasi, sosial, dan lingkungan.
-                            Menggunakan pendekatan inklusif dan berbasis pengalaman, <strong>Green Leadership Indonesia</strong> mendorong generasi muda membangun negara yang adil secara sosial dan ekologis.
-                        </p>
-                        <!-- <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a> -->
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-        <!-- /About Section -->
-
-        <!-- Services Section -->
-        <section id="speaker" class="services section">
-
-            <!-- Section Title -->
-            <div class="container section-title" data-aos="fade-up">
-                <h2>OUR SPEAKER</h2>
-                <p>Prepare Yourslef for Green Leadership Indonesia</p>
-            </div><!-- End Section Title -->
-
-            <div class="container">
-
-            </div>
-
-        </section>
-        <!-- /Services Section -->
-
-        <!-- Recent Blog Postst Section -->
-        <section id="recent-blog-postst" class="recent-blog-postst section light-background">
-
-            <!-- Section Title -->
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Recent Blog Posts</h2>
-                <p>Blog Post Green Leadership Indonesia</p>
-            </div><!-- End Section Title -->
-
-            <div class="container">
-
-                <div class="row gy-5 justify-content-center">
-
-                    <div class="col-xl-4 col-md-6">
-                        <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="100">
-
-                            <div class="post-img position-relative overflow-hidden">
-                                <img src="{{asset('img/civic-edu/narsum/1.png')}}" class="img-fluid" alt="">
-                                <span class="post-date">December 12</span>
-                            </div>
-
-                            <div class="post-content d-flex flex-column">
-
-                                <h3 class="post-title">Judul Berita</h3>
-
-                                <div class="meta d-flex align-items-center">
-                                    <div class="d-flex align-items-center">
-                                        <i class="bi bi-person"></i> <span class="ps-2">Julia Parker</span>
-                                    </div>
-                                    <span class="px-3 text-black-50">/</span>
-                                    <div class="d-flex align-items-center">
-                                        <i class="bi bi-folder2"></i> <span class="ps-2">Politics</span>
+                                <div class="hero-img" data-aos="zoom-in">
+                                    <img src="{{ asset('/storage/'.$b->gambar_berita) }}" alt="Featured blog image" class="img-fluid" loading="lazy">
+                                    <div class="meta-overlay">
+                                        <div class="meta-categories">
+                                            <strong class="category">{{$b->kategori}}</strong>
+                                        </div>
                                     </div>
                                 </div>
 
-                                <hr>
+                                <div class="article-content" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="content-header">
+                                        <h1 class="title">{{$b->judul}}</h1>
 
-                                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+                                        <div class="author-info">
+                                            <div class="author-details">
+                                                <img src="{{asset('img/logo-program/Logo-GLI.png')}}" alt="Author" class="author-img">
+                                                <div class="info">
+                                                    <h4>{{$b->penulis}}</h4>
+                                                    <!-- <span class="role">Senior Web Developer</span> -->
+                                                </div>
+                                            </div>
+                                            <div class="post-meta">
+                                                <span class="date"><i class="bi bi-calendar3"></i> {{$b->tanggal_rilis}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                            </div>
+                                    <div class="content">
+                                        <?= htmlspecialchars_decode($b->isi_berita); ?>
+                                    </div>
+
+                                    <!-- <div class="meta-bottom">
+                                        <div class="tags-section">
+                                            <h4>Related Topics</h4>
+                                            <div class="tags">
+                                                <a href="#" class="tag">Web Development</a>
+                                                <a href="#" class="tag">Performance</a>
+                                                <a href="#" class="tag">Best Practices</a>
+                                                <a href="#" class="tag">Trends</a>
+                                                <a href="#" class="tag">2025</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="share-section">
+                                            <h4>Share Article</h4>
+                                            <div class="social-links">
+                                                <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+                                                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                                                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                                                <a href="#" class="copy-link" title="Copy Link"><i class="bi bi-link-45deg"></i></a>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                </div>
+
+                            </article>
+                            @endforeach
 
                         </div>
+                    </section>
+                    <!-- /Blog Details Section -->
+
+                </div>
+
+                <div class="col-lg-4 sidebar">
+
+                    <div class="widgets-container" data-aos="fade-up" data-aos-delay="200">
+
+                        <!-- Recent Posts Widget -->
+                        <div class="recent-posts-widget widget-item">
+
+                            <h3 class="widget-title">Recent Posts</h3>
+                            @foreach ($beritaFull as $bb)
+
+                            <div class="post-item">
+                                <img src="assets/img/blog/blog-post-square-1.webp" alt="" class="flex-shrink-0">
+                                <div>
+                                    <h4><a href="blog-details.html">{{$bb->judul}}</a></h4>
+                                    <time datetime="2020-01-01">{{$bb->tanggal_rilis}}</time>
+                                </div>
+                            </div>
+                            @endforeach
+                            <!-- End recent post item-->
+
+                        </div>
+                        <!--/Recent Posts Widget -->
+
                     </div>
 
                 </div>
 
             </div>
-
-        </section>
-        <!-- /Recent Blog Postst Section -->
-
-        <!-- Contact Section -->
-        <section id="contact" class="contact section">
-
-            <!-- Section Title -->
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Contact</h2>
-                <p>Contact Project Officer Green Leadership Indonesia</p>
-            </div><!-- End Section Title -->
-
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-                <div class="row gy-4">
-
-                    <div class="col-lg-5">
-
-                        <div class="info-wrap">
-                            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                                <i class="bi bi-geo-alt flex-shrink-0"></i>
-                                <div>
-                                    <h3>Address</h3>
-                                    <p>Jl. Palapa XVII No.3 11, RT.11/RW.5, Ps. Minggu, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12520</p>
-                                </div>
-                            </div><!-- End Info Item -->
-
-                            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                                <i class="bi bi-telephone flex-shrink-0"></i>
-                                <div>
-                                    <h3>Call Us</h3>
-                                    <p>+62 853-7306-7368 (Ichlassul Amal)</p>
-                                </div>
-                            </div><!-- End Info Item -->
-
-                            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                                <i class="bi bi-envelope flex-shrink-0"></i>
-                                <div>
-                                    <h3>Email Us</h3>
-                                    <p>instituthijauindonesiaIHI@gmail.com</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-7">
-                        <div class="info-wrap justify-content-center">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.812277513979!2d106.83611977591471!3d-6.288388361552235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3007740e4d7%3A0x33d807ebd395bc7d!2sInstitut%20Hijau%20Indonesia!5e0!3m2!1sid!2sid!4v1755396628271!5m2!1sid!2sid" width="690" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-        <!-- /Contact Section -->
+        </div>
 
     </main>
 

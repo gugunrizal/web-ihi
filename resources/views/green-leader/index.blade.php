@@ -65,7 +65,7 @@
             <h1 class="text-white">Green Leadership Indonesia</h1>
             <p class="text-white">Memfasilitasi Tumbuhnya Pemimpin dengan Perspektif Keadilan Sosial dan Ekologis</p>
             <div class="d-flex">
-              <a href="#" class="btn-get-started">Login CMS</a>
+              <a href="#" class="btn-get-started">Login LMS</a>
             </div>
           </div>
           <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
@@ -165,7 +165,7 @@
                 </div>
 
                 <hr>
-                <a href="#" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+                <a href="{{route('tampilBeritaGLI', $b->id)}}" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
 
               </div>
 

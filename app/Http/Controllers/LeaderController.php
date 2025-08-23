@@ -22,6 +22,14 @@ class LeaderController extends Controller
             ->where('id', $id)
             ->get();
 
-        return view('green-leader.berita_gli', compact('berita'));
+        $kategori = ['GROW', 'GLI'];
+        $beritaFull = Berita::select('*')
+            ->whereIn('kategori', $kategori)
+            ->get();
+
+        return view('green-leader.berita_gli', [
+            'berita' => $berita,
+            'beritaFull' => $beritaFull
+        ]);
     }
 }
