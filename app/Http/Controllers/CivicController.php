@@ -15,4 +15,21 @@ class CivicController extends Controller
 
         return view('civic-edu.index', ['berita' => $berita]);
     }
+
+    public function tampilBeritaCivic($slug)
+    {
+        $berita = Berita::select('*')
+            ->where('slug', $slug)
+            ->get();
+
+        $kategori = ['CIVIC'];
+        $beritaFull = Berita::select('*')
+            ->whereIn('kategori', $kategori)
+            ->get();
+
+        return view('civic-edu.berita_civic', [
+            'berita' => $berita,
+            'beritaFull' => $beritaFull
+        ]);
+    }
 }

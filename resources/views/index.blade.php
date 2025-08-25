@@ -488,7 +488,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <a href="{{route('tampilBeritaById', $b->id)}}">
+                            <a href="{{route('tampilBeritaById', $b->slug)}}">
                                 <div class="portfolio-content">
                                     <!-- <span class="category">Green Leadership Indonesia</span> -->
                                     <h3>{{$b->judul}}</h3>

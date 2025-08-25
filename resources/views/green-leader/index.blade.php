@@ -44,6 +44,7 @@
         <ul>
           <li><a href="#hero" class="active">Home</a></li>
           <li><a href="#about">About</a></li>
+          <li><a href="{{route('tampilTimGLI')}}">Team</a></li>
           <li><a href="#speaker">Speaker</a></li>
           <li><a href="#recent-blog-postst">Blog</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -165,7 +166,7 @@
                 </div>
 
                 <hr>
-                <a href="{{route('tampilBeritaGLI', $b->id)}}" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+                <a href="{{route('tampilBeritaGLI', $b->slug)}}" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
 
               </div>
 

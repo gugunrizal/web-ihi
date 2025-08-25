@@ -27,7 +27,7 @@ Route::get('/admin/berita', [BeritaController::class, 'tampilBerita'])->name('ta
 // berita
 Route::get('/admin/berita/tambah', [BeritaController::class, 'tampilFormTambah'])->name('tampilFormTambah');
 Route::post('/admin/berita/tambahBerita', [BeritaController::class, 'tambahBerita'])->name('tambahBerita')->middleware('auth');
-Route::get('/berita/{id}', [UserController::class, 'tampilBeritaById'])->name('tampilBeritaById');
+Route::get('/berita/{slug}', [UserController::class, 'tampilBeritaById'])->name('tampilBeritaById');
 Route::get('/admin/berita/{id}', [BeritaController::class, 'tampilFormEdit'])->name('tampilFormEdit')->middleware('auth');
 Route::post('/admin/berita/{id}/edit', [BeritaController::class, 'editBerita'])->name('editBerita')->middleware('auth');
 Route::get('/admin/berita/{id}/hapus', [BeritaController::class, 'hapusBerita'])->name('hapusBerita')->middleware('auth');
@@ -39,9 +39,10 @@ Route::post('/admin/berita/foto/tambahFoto', [BeritaController::class, 'tambahFo
 
 // civic edu
 Route::get('/civic-edu', [CivicController::class, 'tampil'])->name('tampilCivic');
+Route::get('/civic-edu/berita/{slug}', [CivicController::class, 'tampilBeritaCivic'])->name('tampilBeritaCivic');
 // Route::get('/')
 
 // green leader
 Route::get('/green-leader', [LeaderController::class, 'tampil'])->name('tampilGreenLeader');
-// Route::get()
+Route::get('/green-leader/tim', [LeaderController::class, 'tampilTimGLI'])->name('tampilTimGLI');
 Route::get('/green-leader/berita/{id}', [LeaderController::class, 'tampilBeritaGLI'])->name('tampilBeritaGLI');

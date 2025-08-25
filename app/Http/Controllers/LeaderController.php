@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Berita;
+use App\Models\Pengurus;
 use Illuminate\Http\Request;
 
 class LeaderController extends Controller
@@ -31,5 +32,13 @@ class LeaderController extends Controller
             'berita' => $berita,
             'beritaFull' => $beritaFull
         ]);
+    }
+
+    public function tampilTimGLI()
+    {
+        $fasil = Pengurus::select('*')
+            ->where('jabatan', 'Fasilitator')
+            ->get();
+        return view('green-leader.tim_gli', compact('fasil'));
     }
 }
