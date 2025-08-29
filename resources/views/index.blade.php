@@ -13,10 +13,10 @@
                     <div class="carousel-caption">
                         <div data-aos="fade-up" data-aos-delay="100">
                             <h1 class="text-white">INSTITUT HIJAU INDONESIA</h1>
-                            <p style="background-color: white; color: black; border-radius: 10px; padding: 3px;">
+                            <p style="background-color: white; color: black; border-radius: 10px; padding: 3px; font-size: 15px">
                                 Social and Ecological Justice
                             </p>
-                            <p>
+                            <p style="font-size: 15px">
                                 Di bawah Yayasan Peradaban Hijau Indonesia, Institut Hijau Indonesia menjadi wadah untuk menuju peradaban Hijau Indonesia yang lebih adil dan lestari.
                             </p>
                         </div>
@@ -488,7 +488,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <a href="{{route('tampilBeritaById', $b->id)}}">
+                            <a href="{{route('tampilBeritaById', $b->slug)}}">
                                 <div class="portfolio-content">
                                     <!-- <span class="category">Green Leadership Indonesia</span> -->
                                     <h3>{{$b->judul}}</h3>

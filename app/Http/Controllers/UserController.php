@@ -29,10 +29,10 @@ class UserController extends Controller
         return view('allBerita', ['berita' => $berita]);
     }
 
-    public function tampilBeritaById($id)
+    public function tampilBeritaById($slug)
     {
         $berita = Berita::select('*')
-            ->where('id', $id)
+            ->where('slug', $slug)
             ->get();
         // $berita = html_entity_decode($berita);
         // $berita = strip_tags($berita);
