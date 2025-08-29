@@ -8,5 +8,5 @@ class Pengurus extends Model
 {
     protected $table = 'pengurus';
     protected $primaryKey = 'id';
-    protected $fillable = ['nama', 'jabatan', 'foto'];
+    protected $fillable = ['nama', 'jabatan', 'kode', 'foto'];
 }

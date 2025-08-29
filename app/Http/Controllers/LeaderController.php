@@ -36,9 +36,20 @@ class LeaderController extends Controller
 
     public function tampilTimGLI()
     {
-        $fasil = Pengurus::select('*')
-            ->where('jabatan', 'Fasilitator')
-            ->get();
-        return view('green-leader.tim_gli', compact('fasil'));
+        $oc = Pengurus::where('kode', 'oc')->get();
+        $weavers = Pengurus::where('kode', 'weavers')->get();
+        $koreg = Pengurus::where('kode', 'koreg')->get();
+        $star = Pengurus::where('kode', 'star')->get();
+        $builders = Pengurus::where('kode', 'builders')->get();
+        return view(
+            'green-leader.tim_gli',
+            [
+                'oc' => $oc,
+                'weavers' => $weavers,
+                'koreg' => $koreg,
+                'star' => $star,
+                'builders' => $builders
+            ]
+        );
     }
 }

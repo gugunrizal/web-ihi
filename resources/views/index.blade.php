@@ -256,9 +256,9 @@
                 <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
                     <div class="team-card">
                         <div class="team-image">
-                            <img src="img/santri.png" class="img-fluid" alt="">
+                            <img src="{{asset('img/tim-ihi/chalid.jpg')}}" class="img-fluid" alt="">
                             <div class="team-overlay">
-                                <p>Institut Hijau Indonesia</p>
+                                <p>Chalid Muhammad</p>
                                 <div class="team-social">
                                     <a href=""><i class="bi bi-twitter-x"></i></a>
                                     <a href=""><i class="bi bi-facebook"></i></a>
@@ -277,9 +277,9 @@
                 <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
                     <div class="team-card">
                         <div class="team-image">
-                            <img src="img/santri.png" class="img-fluid" alt="">
+                            <img src="{{asset('img/tim-ihi/selamet.jpg')}}" class="img-fluid" alt="">
                             <div class="team-overlay">
-                                <p>Institut Hijau Indonesia</p>
+                                <p>Selamet Daroini</p>
                                 <div class="team-social">
                                     <a href=""><i class="bi bi-twitter-x"></i></a>
                                     <a href=""><i class="bi bi-facebook"></i></a>
@@ -300,7 +300,7 @@
                         <div class="team-image">
                             <img src="img/santri.png" class="img-fluid" alt="">
                             <div class="team-overlay">
-                                <p>Institut Hijau Indonesia</p>
+                                <p>Akhmad Supiani</p>
                                 <div class="team-social">
                                     <a href=""><i class="bi bi-twitter-x"></i></a>
                                     <a href=""><i class="bi bi-facebook"></i></a>
@@ -319,9 +319,9 @@
                 <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
                     <div class="team-card">
                         <div class="team-image">
-                            <img src="img/santri.png" class="img-fluid" alt="">
+                            <img src="{{asset('img/tim-ihi/zen.jpg')}}" class="img-fluid" alt="">
                             <div class="team-overlay">
-                                <p>Institut Hijau Indonesia</p>
+                                <p>Zen Smith</p>
                                 <div class="team-social">
                                     <a href=""><i class="bi bi-twitter-x"></i></a>
                                     <a href=""><i class="bi bi-facebook"></i></a>
