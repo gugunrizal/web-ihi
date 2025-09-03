@@ -42,12 +42,14 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="{{route('tampilGreenLeader')}}" class="active">Home</a></li>
+          <li><a href="{{route('tampilGreenLeader')}}#about">About</a></li>
           <li><a href="{{route('tampilTimGLI')}}">Team</a></li>
-          <li><a href="#speaker">Speaker</a></li>
-          <li><a href="#recent-blog-postst">Blog</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="{{route('tampilGreenLeader')}}#speaker">Speaker</a></li>
+          <li><a href="{{route('tampilGreenLeader')}}#recent-blog-postst">Blog</a></li>
+          <li><a href="{{route('tampilGreenLeader')}}#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
       <a class="btn-getstarted" href="{{route('home')}}">Kembali</a>
@@ -118,11 +120,23 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>OUR SPEAKER</h2>
-        <p>Prepare Yourslef for Green Leadership Indonesia</p>
+        <p>Prepare Yourself for Green Leadership Indonesia</p>
       </div><!-- End Section Title -->
 
       <div class="container">
+        <div class="row gy-4 justify-content-center">
+          @foreach ($speaker as $s)
 
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item position-relative">
+              <img src="{{asset('img/speaker/'.$s->foto)}}" class="img-fluid rounded" alt="Zainal Arifin Mochtar, S.H., LL.M.">
+              <h5 class="text-center mt-2">{{$s->nama}}</h5>
+              <p style="font-style: italic;" class="text-center">{{$s->materi}}</p>
+            </div>
+          </div>
+
+          @endforeach
+        </div>
       </div>
 
     </section>

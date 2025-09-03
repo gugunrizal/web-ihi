@@ -4,17 +4,23 @@ namespace App\Http\Controllers;
 
 use App\Models\Berita;
 use App\Models\Pengurus;
+use App\Models\Speaker;
 use Illuminate\Http\Request;
 
 class LeaderController extends Controller
 {
     public function tampil()
     {
+        $speaker = Speaker::select('*')->where('kategori', 'GLI')->get();
         $kategori = ['GROW', 'GLI'];
         $berita = Berita::select('*')
             ->whereIn('kategori', $kategori)
             ->get();
-        return view('green-leader.index', ['berita' => $berita]);
+
+        return view('green-leader.index', [
+            'berita' => $berita,
+            'speaker' => $speaker
+        ]);
     }
 
     public function tampilBeritaGLI($id)
@@ -41,6 +47,7 @@ class LeaderController extends Controller
         $koreg = Pengurus::where('kode', 'koreg')->get();
         $star = Pengurus::where('kode', 'star')->get();
         $builders = Pengurus::where('kode', 'builders')->get();
+        $fasil = Pengurus::where('kode', 'fasil')->get();
         return view(
             'green-leader.tim_gli',
             [
@@ -48,7 +55,8 @@ class LeaderController extends Controller
                 'weavers' => $weavers,
                 'koreg' => $koreg,
                 'star' => $star,
-                'builders' => $builders
+                'builders' => $builders,
+                'fasil' => $fasil
             ]
         );
     }

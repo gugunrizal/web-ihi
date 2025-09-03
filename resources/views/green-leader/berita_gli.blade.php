@@ -42,11 +42,14 @@
 
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#speaker">Speaker</a></li>
-                    <li><a href="#recent-blog-postst" class="active">Blog</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="{{route('tampilGreenLeader')}}">Home</a></li>
+                    <li><a href="{{route('tampilGreenLeader')}}#about">About</a></li>
+                    <li><a href="{{route('tampilTimGLI')}}">Team</a></li>
+                    <li><a href="{{route('tampilGreenLeader')}}#speaker">Speaker</a></li>
+                    <li><a href="{{route('tampilGreenLeader')}}#recent-blog-postst" class="active">Blog</a></li>
+                    <li><a href="{{route('tampilGreenLeader')}}#contact">Contact</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
 
             <a class="btn-getstarted" href="{{route('home')}}">Kembali</a>

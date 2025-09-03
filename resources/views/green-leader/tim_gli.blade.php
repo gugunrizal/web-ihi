@@ -42,12 +42,14 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="{{route('tampilGreenLeader')}}">Home</a></li>
+          <li><a href="{{route('tampilGreenLeader')}}#about">About</a></li>
           <li><a href="{{route('tampilTimGLI')}}" class="active">Team</a></li>
-          <li><a href="#speaker">Speaker</a></li>
-          <li><a href="#recent-blog-postst">Blog</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="{{route('tampilGreenLeader')}}#speaker">Speaker</a></li>
+          <li><a href="{{route('tampilGreenLeader')}}#recent-blog-postst">Blog</a></li>
+          <li><a href="{{route('tampilGreenLeader')}}#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
       <a class="btn-getstarted" href="{{route('home')}}">Kembali</a>
@@ -69,28 +71,28 @@
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row justify-content-center">
-          <div class="col-md-2">
+          <div class="col-md-2 col-6">
             <div class="testimonial-item">
               <img src="{{asset('img/green-leader/tim-gli/sc/1.jpg')}}" class="testimonial-img" alt="">
               <h3>Chalid Muhammad</h3>
               <h4>Kepala Sekolah</h4>
             </div>
           </div>
-          <div class="col-md-2">
+          <div class="col-md-2 col-6">
             <div class="testimonial-item">
               <img src="{{asset('img/green-leader/tim-gli/sc/2.jpg')}}" class="testimonial-img" alt="">
               <h3>Selamet Daroyni</h3>
               <h4>Direktur Eksekutif IHI</h4>
             </div>
           </div>
-          <div class="col-md-2">
+          <div class="col-md-2 col-6">
             <div class="testimonial-item">
               <img src="{{asset('img/green-leader/tim-gli/sc/3.png')}}" class="testimonial-img" alt="">
               <h3>Dani Setiawan</h3>
               <h4>Ketua KNTI</h4>
             </div>
           </div>
-          <div class="col-md-2">
+          <div class="col-md-2 col-6">
             <div class="testimonial-item">
               <img src="{{asset('img/green-leader/tim-gli/sc/4.png')}}" class="testimonial-img" alt="">
               <h3>Zenzi Suhadi</h3>
@@ -109,21 +111,21 @@
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row justify-content-center">
-          <div class="col-md-2">
+          <div class="col-md-2 col-4">
             <div class="testimonial-item">
-              <img src="{{asset('img/santri.png')}}" class="testimonial-img" alt="">
+              <img src="{{asset('img/green-leader/tim-gli/oc/2.png')}}" class="testimonial-img" alt="">
               <h3>Fachruddin Dokumalamo</h3>
               <h4>Project Officer</h4>
             </div>
           </div>
-          <div class="col-md-2">
+          <div class="col-md-2 col-4">
             <div class="testimonial-item">
               <img src="{{asset('img/green-leader/tim-gli/oc/1.jpg')}}" class="testimonial-img" alt="">
               <h3>Zepanya Sihombing</h3>
               <h4>Builders</h4>
             </div>
           </div>
-          <div class="col-md-2">
+          <div class="col-md-2 col-4">
             <div class="testimonial-item">
               <img src="{{asset('img/green-leader/tim-gli/pokja/weavers/3.jpg')}}" class="testimonial-img" alt="">
               <h3>Ulfatur Roziana A. H.</h3>
@@ -141,7 +143,7 @@
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row justify-content-center">
           @foreach ($builders as $bl)
-          <div class="col-md-2">
+          <div class="col-md-2 col-4">
             <div class="testimonial-item">
               <img src="{{asset('img/green-leader/tim-gli/pokja/builders/'.$bl->foto)}}" class="testimonial-img" alt="">
               <h3>{{$bl->nama}}</h3>
@@ -160,7 +162,7 @@
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row justify-content-center">
           @foreach ($weavers as $wv)
-          <div class="col-md-2">
+          <div class="col-md-2 col-4">
             <div class="testimonial-item">
               <img src="{{asset('img/green-leader/tim-gli/pokja/weavers/'.$wv->foto)}}" class="testimonial-img" alt="">
               <h3>{{$wv->nama}}</h3>
@@ -179,7 +181,7 @@
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row justify-content-center">
           @foreach ($star as $st)
-          <div class="col-md-2">
+          <div class="col-md-2 col-4">
             <div class="testimonial-item">
               <img src="{{asset('img/green-leader/tim-gli/pokja/star/'.$st->foto)}}" class="testimonial-img" alt="">
               <h3>{{$st->nama}}</h3>
@@ -198,11 +200,29 @@
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row justify-content-center">
           @foreach ($koreg as $kr)
-          <div class="col-md-2">
+          <div class="col-md-2 col-4">
             <div class="testimonial-item">
               <img src="{{asset('img/green-leader/tim-gli/koreg/'.$kr->foto)}}" class="testimonial-img" alt="">
               <h3>{{$kr->nama}}</h3>
               <h4>{{$kr->jabatan}}</h4>
+            </div>
+          </div>
+          @endforeach
+        </div>
+      </div>
+
+      <div class="container section-title mt-3" data-aos="fade-up">
+        <hr>
+        <p><strong>Fasilitator</strong></p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center">
+          @foreach ($fasil as $fa)
+          <div class="col-md-2 col-4">
+            <div class="testimonial-item">
+              <img src="{{asset('img/green-leader/tim-gli/fasil/'.$fa->foto)}}" class="testimonial-img" alt="">
+              <p>{{$fa->nama}}</p>
             </div>
           </div>
           @endforeach

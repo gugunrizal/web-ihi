@@ -298,7 +298,7 @@
                 <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
                     <div class="team-card">
                         <div class="team-image">
-                            <img src="img/santri.png" class="img-fluid" alt="">
+                            <img src="{{asset('img/tim-ihi/akhmad.jpg')}}" class="img-fluid" alt="">
                             <div class="team-overlay">
                                 <p>Akhmad Supiani</p>
                                 <div class="team-social">
