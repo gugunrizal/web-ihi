@@ -12,14 +12,27 @@ class LeaderController extends Controller
     public function tampil()
     {
         $speaker = Speaker::select('*')->where('kategori', 'GLI')->get();
-        $kategori = ['GROW', 'GLI'];
+        $kategori = ['GROW', 'GLI', 'SUAR'];
         $berita = Berita::select('*')
             ->whereIn('kategori', $kategori)
+            ->limit(6)
             ->get();
 
         return view('green-leader.index', [
             'berita' => $berita,
             'speaker' => $speaker
+        ]);
+    }
+
+    public function tampilAllBeritaGLI()
+    {
+        $kategori = ['GROW', 'GLI', 'SUAR'];
+        $berita = Berita::select('*')
+            ->whereIn('kategori', $kategori)
+            ->get();
+
+        return view('green-leader.all_berita_gli', [
+            'berita' => $berita
         ]);
     }
 

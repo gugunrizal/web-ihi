@@ -191,6 +191,14 @@
 
         </div>
 
+        <div class="container">
+          <div class="row" style="padding-top: 50px;">
+            <div class="col-12 text-center">
+              <a href="{{route('tampilAllBeritaGLI')}}" class="btn btn-success">Selengkapnya</a>
+            </div>
+          </div>
+        </div>
+
       </div>
 
     </section>
@@ -263,7 +271,7 @@
           </a>
           <div class="footer-contact pt-3">
             <p>Jl. Palapa XVII No.3 11, RT.11/RW.5, Ps. Minggu, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12520</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+62 853-7306-7368 (Ichlassul Amal)</span></p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+62 852-4260-0884 (Fachruddin Dokumalamo)</span></p>
             <p><strong>Email:</strong> <span>instituthijauindonesiaIHI@gmail.com</span></p>
           </div>
         </div>

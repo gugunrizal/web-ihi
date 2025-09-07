@@ -29,9 +29,13 @@
                     <select class="form-select form-control form-control-sm" aria-label="Default select example" name="kategori" id="kategori">
                         <option selected>Pilih Kategori</option>
                         <option value="GROW">GROW</option>
+                        <option value="SUAR">SUAR</option>
                         <option value="GLI">GLI</option>
                         <option value="CIVIC">CIVIC</option>
-                        <option value="SUAR">SUAR</option>
+                        <option value="Kotak Suara Lingkungan">Kotak Suara Lingkungan</option>
+                        <option value="Ekososlab">Ekososlab</option>
+                        <option value="Blog">Blog</option>
+                        <option value="After Class Report">After Class Report</option>
                     </select>
                 </div>
                 <div class="mb-3">

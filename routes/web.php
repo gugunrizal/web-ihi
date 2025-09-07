@@ -46,3 +46,4 @@ Route::get('/civic-edu/berita/{slug}', [CivicController::class, 'tampilBeritaCiv
 Route::get('/green-leader', [LeaderController::class, 'tampil'])->name('tampilGreenLeader');
 Route::get('/green-leader/tim', [LeaderController::class, 'tampilTimGLI'])->name('tampilTimGLI');
 Route::get('/green-leader/berita/{id}', [LeaderController::class, 'tampilBeritaGLI'])->name('tampilBeritaGLI');
+Route::get('/green-leader/all/berita', [LeaderController::class, 'tampilAllBeritaGLI'])->name('tampilAllBeritaGLI');
