@@ -4,9 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Berita | Green Leadership Indonesia</title>
+    <title>Berita | Civic Education</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
+    @foreach ($berita as $b)
+    <meta property="og:title" content="{{$b->judul}}">
+    <meta property="og:image" content="{{asset('img/gambar_berita/'.$b->gambar_berita)}}">
+    @endforeach
 
     <!-- Favicons -->
     <link href="{{asset('img/logo-program/logo-civic-white.png')}}" rel="icon">
@@ -34,10 +38,10 @@
     <header id="header" class="header d-flex align-items-center fixed-top" style="background-color: #950c0c;">
         <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-            <a href="index.html" class="logo d-flex align-items-center me-auto">
+            <a href="{{route('tampilCivic')}}" class="logo d-flex align-items-center me-auto">
                 <!-- Uncomment the line below if you also wish to use an image logo -->
                 <!-- <img src="assets/img/logo.webp" alt=""> -->
-                <h1 class="sitename">Green Leadership Indonesia</h1>
+                <h1 class="sitename">Civic Education</h1>
             </a>
 
             <nav id="navmenu" class="navmenu">
@@ -75,15 +79,15 @@
                 <div class="col-lg-8">
 
                     <!-- Blog Details Section -->
-                    <section id="blog-details" class="blog-details section">
-                        <div class="container" data-aos="fade-up">
+                    <section id="blog-details " class="blog-details section">
+                        <div class="container widget-item" data-aos="fade-up">
 
                             @foreach ($berita as $b)
 
                             <article class="article">
 
                                 <div class="hero-img" data-aos="zoom-in">
-                                    <img src="{{ asset('/storage/'.$b->gambar_berita) }}" alt="Featured blog image" class="img-fluid" loading="lazy">
+                                    <img src="{{asset('img/gambar_berita/'.$b->gambar_berita)}}" alt="Featured blog image" class="img-fluid" loading="lazy">
                                     <div class="meta-overlay">
                                         <div class="meta-categories">
                                             <strong class="category">{{$b->kategori}}</strong>
@@ -97,7 +101,7 @@
 
                                         <div class="author-info">
                                             <div class="author-details">
-                                                <img src="{{asset('img/logo-program/Logo-GLI.png')}}" alt="Author" class="author-img">
+                                                <img src="{{asset('img/logo-program/Logo-Civic.png')}}" alt="Author" class="author-img">
                                                 <div class="info">
                                                     <h4>{{$b->penulis}}</h4>
                                                     <!-- <span class="role">Senior Web Developer</span> -->
@@ -157,7 +161,7 @@
                             @foreach ($beritaFull as $bb)
 
                             <div class="post-item">
-                                <img src="assets/img/blog/blog-post-square-1.webp" alt="" class="flex-shrink-0">
+                                <img src="{{asset('img/gambar_berita/'.$bb->gambar_berita)}}" alt="" class="flex-shrink-0">
                                 <div>
                                     <h4><a href="{{route('tampilBeritaCivic', $bb->slug)}}">{{$bb->judul}}</a></h4>
                                     <time datetime="2020-01-01">{{$bb->tanggal_rilis}}</time>
@@ -184,7 +188,7 @@
             <div class="row gy-4">
                 <div class="col-lg-5 col-md-6 footer-about">
                     <a href="{{route('tampilCivic')}}" class="d-flex align-items-center">
-                        <span class="sitename" style="color: #088a08;">Green Leadership Indonesia</span>
+                        <span class="sitename" style="color: #088a08;">Civic Education</span>
                     </a>
                     <div class="footer-contact pt-3">
                         <p>Jl. Palapa XVII No.3 11, RT.11/RW.5, Ps. Minggu, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12520</p>
@@ -220,7 +224,7 @@
         <div class="container copyright text-center mt-4">
             <p>© <span>Copyright</span> <a href="{{route('home')}}" class="px-1 sitename"><strong>Institut Hijau Indonesia</strong></a> <span>All Rights Reserved</span></p>
             <div class="credits">
-                Green Leadership Indonesia
+                Civic Education
             </div>
         </div>
 

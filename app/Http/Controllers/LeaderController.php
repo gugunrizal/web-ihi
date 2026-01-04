@@ -12,9 +12,10 @@ class LeaderController extends Controller
     public function tampil()
     {
         $speaker = Speaker::select('*')->where('kategori', 'GLI')->get();
-        $kategori = ['GROW', 'GLI', 'SUAR'];
+        $kategori = ['GROW', 'GLI', 'SUAR', 'After Class Report'];
         $berita = Berita::select('*')
             ->whereIn('kategori', $kategori)
+            ->orderBy('tanggal_rilis', 'desc')
             ->limit(6)
             ->get();
 
@@ -23,12 +24,13 @@ class LeaderController extends Controller
             'speaker' => $speaker
         ]);
     }
-
+    
     public function tampilAllBeritaGLI()
     {
-        $kategori = ['GROW', 'GLI', 'SUAR'];
+        $kategori = ['GROW', 'GLI', 'SUAR', 'After Class Report'];
         $berita = Berita::select('*')
             ->whereIn('kategori', $kategori)
+            ->orderBy('tanggal_rilis', 'desc')
             ->get();
 
         return view('green-leader.all_berita_gli', [
@@ -36,15 +38,16 @@ class LeaderController extends Controller
         ]);
     }
 
-    public function tampilBeritaGLI($id)
+    public function tampilBeritaGLI($slug)
     {
         $berita = Berita::select('*')
-            ->where('id', $id)
+            ->where('slug', $slug)
             ->get();
 
-        $kategori = ['GROW', 'GLI'];
+        $kategori = ['GROW', 'GLI', 'SUAR', 'After Class Report'];
         $beritaFull = Berita::select('*')
             ->whereIn('kategori', $kategori)
+            ->orderBy('tanggal_rilis', 'desc')
             ->get();
 
         return view('green-leader.berita_gli', [

@@ -4,70 +4,67 @@
 
     <!-- Hero Section -->
     <section id="hero" class="hero section">
-        <div id="carouselExample" class="carousel slide">
-            <div class="carousel-inner">
-                <div class="carousel-item active position-relative">
-                    <video class="img-fluid w-100" autoplay loop muted>
-                        <source src="https://mdbcdn.b-cdn.net/img/video/Tropical.mp4" type="video/mp4" />
-                    </video>
-                    <div class="carousel-caption">
-                        <div data-aos="fade-up" data-aos-delay="100">
-                            <h1 class="text-white">INSTITUT HIJAU INDONESIA</h1>
-                            <p style="background-color: white; color: black; border-radius: 10px; padding: 3px; font-size: 15px">
-                                Social and Ecological Justice
-                            </p>
-                            <p style="font-size: 15px">
-                                Di bawah Yayasan Peradaban Hijau Indonesia, Institut Hijau Indonesia menjadi wadah untuk menuju peradaban Hijau Indonesia yang lebih adil dan lestari.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-        <!-- <div class="container" data-aos="fade-up" data-aos-delay="100"> -->
 
-        <!-- <div class="row align-items-center mb-5" style="min-height: 400px;"> -->
-        <!-- <div class="col mb-4 mb-lg-0"> -->
+        <div class="container mt-5" data-aos="fade-up" data-aos-delay="100">
+            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
+                <div class="carousel-inner">
+                    @foreach ($berita as $index => $b)
+                    <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
+                        <div class="row align-items-center mb-5">
+                            <div class="col-lg-6 mb-4 mb-lg-0">
+                                <div class="badge-wrapper mb-3">
+                                    <div class="d-inline-flex align-items-center rounded-pill border border-accent-light">
+                                        <div class="icon-circle me-2">
+                                            <i class="bi bi-bell"></i>
+                                        </div>
+                                        <span class="badge-text me-3">Berita Terbaru</span>
+                                    </div>
+                                </div>
 
-        <!-- <h1 class="text-center text-white" style="font-size: 60px;">
-                        INSTITUT HIJAU INDONESIA
-                    </h1> -->
-        <!-- <div class="badge-wrapper mb-3">
-                        <div class="d-inline-flex align-items-center rounded-pill border border-accent-light">
-                            <div class="icon-circle me-2">
-                                <i class="bi bi-bell"></i>
+                                <h3 class="mb-4">{{ $b->judul }}</h3>
+
+                                <p class="hero-description mb-4">{{ $b->ringkasan_berita }}</p>
+
+                                <div class="cta-wrapper d-grid gap-2 bg-ihi">
+                                    <a href="{{route('tampilBeritaById', $b->slug)}}" class="btn text-white bg-ihi">Selengkapnya</a>
+                                </div>
                             </div>
-                            <span class="badge-text me-3">Social and Ecological Justice</span>
+
+                            <div class="col-lg-6">
+                                <div class="hero-image">
+                                    <img src="{{ asset('/storage/'.$b->gambar_berita) }}" alt="{{ $b->judul }}" class="img-fluid" loading="lazy">
+                                </div>
+
+                            </div>
                         </div>
                     </div>
-
-                    <h1 class="hero-title mb-4">INSTITUT HIJAU INDONESIA</h1>
-
-                    <p class="hero-description mb-4">Di bawah Yayasan Peradaban Hijau Indonesia, Institut Hijau Indonesia menjadi wadah untuk menuju peradaban Hijau Indonesia yang lebih adil dan lestari.</p>
-
-                    <div class="cta-wrapper">
-                        <a href="#about" class="btn btn-success">Selanjutnya</a>
-                    </div>
+                    @endforeach
                 </div>
 
-                <div class="col-lg-6">
-                    <div class="hero-image">
-                        <img src="img/main-logo.png" alt="Business Growth" class="img-fluid" loading="lazy">
-                    </div>
-                </div> -->
-        <!-- </div> -->
-        <!-- </div> -->
+                <!-- Indicators -->
+                <div class="carousel-indicators">
+                    @foreach ($berita as $index => $b)
+                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="{{ $index }}"
+                        class="{{ $index == 0 ? 'active' : '' }}" aria-current="{{ $index == 0 ? 'true' : 'false' }}"
+                        aria-label="Slide {{ $index + 1 }}"></button>
+                    @endforeach
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+        </div>
 
     </section>
     <!-- /Hero Section -->
+
 
     <!-- About Section -->
     <section id="about" class="about section light-background">

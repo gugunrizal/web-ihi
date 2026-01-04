@@ -30,7 +30,7 @@
 </head>
 
 <body class="index-page">
-    <header id="header" class="header d-flex align-items-center fixed-top bg-success">
+    <header id="header" class="header d-flex align-items-center fixed-top bg-ihi">
         <div class="container position-relative d-flex align-items-center justify-content-between">
 
             <a href="{{route('home')}}" class="logo d-flex align-items-center me-auto me-xl-0">
@@ -41,13 +41,29 @@
 
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="{{route('home')}}" class="">Beranda</a></li>
-                    <li><a href="{{route('home')}}" class="">Tentang Kami</a></li>
-                    <li><a href="{{route('home')}}" class="">Program Kami</a></li>
-                    <li><a href="{{route('home')}}" class="">Tim</a></li>
-                    <li><a href="{{route('home')}}" class="">Galeri</a></li>
-                    <li><a href="{{route('home')}}" class="active">Blog</a></li>
-                    <li><a href="{{route('home')}}" class="">Kontak Kami</a></li>
+                    <li><a href="{{route('home')}}#hero" class="">Beranda</a></li>
+                    <li class="dropdown"><a href="{{route('home')}}#about" class=""><span>Tentang Kami</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="{{route('tampilAbout')}}">Sejarah</a></li>
+                            <li><a href="{{route('tampilTim')}}">Pengurus Inti</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="{{route('home')}}#how-we-work" class=""><span>Program Kami</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="{{route('tampilGreenLeader')}}">Green Leadership Indonesia</a></li>
+                            <li><a href="#">Green Youth Movement</a></li>
+                            <li><a href="#">Green Public Interest Lawyer</a></li>
+                            <li><a href="#">Laboratorium Keadilan Sosial dan Ekologis</a></li>
+                            <li><a href="#">Jurnal Peradaban Hijau</a></li>
+                            <li><a href="{{route('tampilCivic')}}">Civic Education</a></li>
+                        </ul>
+                    </li>
+                    <!-- <li><a href="{{route('tampilAllBerita')}}" class="">Blog</a></li> -->
+
+                    <li><a href="{{route('home')}}#team" class="">Tim</a></li>
+                    <li><a href="{{route('home')}}#portfolio" class="">Galeri</a></li>
+                    <li><a href="{{route('home')}}#blog" class="active">Blog</a></li>
+                    <li><a href="{{route('home')}}#contact" class="">Kontak Kami</a></li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
@@ -60,23 +76,61 @@
     <main class="main">
         <section class="berita">
             <div class="container">
-
-                @foreach ($berita as $b)
-                <div class="container section-title" data-aos="fade-up">
-                    <h3>{{$b->judul}}</h3>
-                    <p>
-                        Ditulis oleh {{$b->penulis}} | {{$b->tanggal_rilis}} | {{$b->kategori}}
-                    </p>
-                    <!-- <p>{{$b->ringkasan_berita}}</p> -->
-                </div><!-- End Section Title -->
-
-                <div class="container" data-aos="fade-up" data-aos-delay="100">
-                    <div class="text-center mb-5">
-                        <img src="{{asset('storage/'.$b->gambar_berita)}}" alt="" class="img-fluid">
-                    </div>
-                    <div><?= htmlspecialchars_decode($b->isi_berita); ?></div>
+                <!-- Page Title -->
+                <div class="page-title">
+                    <nav class="breadcrumbs">
+                        <div class="container">
+                            <ol>
+                                <li><a href="index.html">Home</a></li>
+                                <li class="current">Detail Berita</li>
+                            </ol>
+                        </div>
+                    </nav>
                 </div>
-                @endforeach
+                <!-- End Page Title -->
+
+                <!-- Portfolio Details Section -->
+                <section id="portfolio-details" class="portfolio-details section">
+
+                    <div class="container" data-aos="fade-up">
+
+                        @foreach ($berita as $b)
+                        <img src="{{asset('storage/'.$b->gambar_berita)}}" alt="" class="img-fluid">
+
+                        <div class="row justify-content-between gy-4 mt-4">
+
+                            <div class="col-lg-8" data-aos="fade-up">
+                                <div class="portfolio-description">
+                                    <h2>{{$b->judul}}</h2>
+                                    <h6>Ditulis oleh {{$b->penulis}} | {{$b->tanggal_rilis}}</h6>
+                                    <hr>
+                                    <p>
+                                    <div style="text-align: justify;"><?= htmlspecialchars_decode($b->isi_berita); ?></div>
+                                    </p>
+                                </div>
+                            </div>
+                            @endforeach
+
+                            <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                                <div class="portfolio-info">
+                                    <h3>Berita Lainnya</h3>
+                                    <ul>
+                                        @foreach ($beritaFull as $bb)
+                                        <li>
+                                            <a href="{{route('tampilBeritaById', $bb->slug)}}">
+                                                <h6>{{$bb->judul}} </h6> | <strong> {{$bb->tanggal_rilis}} </strong>
+                                            </a>
+                                        </li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </section>
+                <!-- /Portfolio Details Section -->
             </div>
         </section>
     </main>

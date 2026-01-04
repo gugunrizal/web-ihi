@@ -3017,7 +3017,7 @@ section,
 }
 
 .berita {
-  padding-top: 150px;
+  padding-top: 50px;
 }
 
 .beritaTengah {
@@ -3026,4 +3026,8 @@ section,
 
 .hero-bg {
   background: url("{{asset('img/bg.JPG')}}");
+}
+
+.bg-ihi {
+  background-color: #088a08;
 }

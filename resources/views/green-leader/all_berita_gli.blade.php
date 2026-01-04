@@ -7,6 +7,10 @@
     <title>Berita | Green Leadership Indonesia</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
+    @foreach ($berita as $b)
+    <meta property="og:title" content="{{$b->judul}}">
+    <meta property="og:image" content="{{asset('img/gambar_berita/'.$b->gambar_berita)}}">
+    @endforeach
 
     <!-- Favicons -->
     <link href="{{asset('img/logo-program/Logo-GLI.png')}}" rel="icon">
