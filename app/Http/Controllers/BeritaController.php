@@ -11,7 +11,9 @@ class BeritaController extends Controller
 {
     public function tampilBerita()
     {
-        $berita = Berita::select('*')->get();
+        $berita = Berita::select('*')
+            ->orderBy('tanggal_rilis', 'desc')
+            ->get();
         return view('admin.berita', ['berita' => $berita]);
     }
 
@@ -28,7 +30,7 @@ class BeritaController extends Controller
 
         // $file = $request->gambar_berita;
         $nama_file = time() . "_" . $request->gambar->getClientOriginalName();
-        $file = $request->gambar->storeAs('gambar_berita', $nama_file, 'public');
+        $file = $request->gambar->storeAs('gambar_berita', $nama_file, 'public_html');
         // $request->gambar->move(public_path('/img/foto_berita'), $nama_file);
         $berita = $request->isi;
         // $isi = htmlspecialchars($berita, ENT_QUOTES, 'UTF-8');
@@ -68,17 +70,17 @@ class BeritaController extends Controller
         // $nama_file = time() . "_" . $request->gambar->getClientOriginalName();
         // $request->gambar->move(public_path('/img/foto_berita'), $nama_file);
         $nama_file = time() . "_" . $request->gambar->getClientOriginalName();
-        $file = $request->gambar->storeAs('gambar_berita', $nama_file, 'public');
+        $file = $request->gambar->storeAs('gambar_berita', $nama_file, 'public_html');
 
         Berita::where('id', $request->id)->update([
             'judul' => $request->judul,
             'penulis' => $request->penulis,
             'tanggal_rilis' => $request->tanggal_rilis,
-            'slug' => $request->slug,
-            'isi_berita' => $request->isi,
+            // 'slug' => $request->slug,
+           // 'isi_berita' => $request->isi,
             'ringkasan_berita' => $request->ringkasan,
-            'status' => $request->status,
-            'gambar_berita' => $file
+            'status' => $request->status
+            // 'gambar_berita' => $file
         ]);
 
         return redirect()->route('tampilBerita');
@@ -110,11 +112,12 @@ class BeritaController extends Controller
         ]);
 
         $nama_file = time() . "_" . $request->gambar->getClientOriginalName();
-        $file = $request->gambar->storeAs('gambar_berita', $nama_file, 'public');
+        $file = $request->gambar->storeAs('gambar_berita', $nama_file, 'dokumentasi_berita');
 
         FotoBerita::create([
             'deskripsi' => $request->deskripsi,
-            'gambar' => $file
+            'gambar' => $file,
+            'link' => url()
         ]);
 
         return redirect()->route('tampilFotoBerita')->with('success', 'Berhasil Berhasil disimpan');

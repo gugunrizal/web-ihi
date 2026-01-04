@@ -7,6 +7,10 @@
     <title>Berita | Green Leadership Indonesia</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
+    @foreach ($berita as $b)
+    <meta property="og:title" content="{{$b->judul}}">
+    <meta property="og:image" content="{{asset('img/gambar_berita/'.$b->gambar_berita)}}">
+    @endforeach
 
     <!-- Favicons -->
     <link href="{{asset('img/logo-program/Logo-GLI.png')}}" rel="icon">
@@ -34,7 +38,7 @@
     <header id="header" class="header d-flex align-items-center fixed-top" style="background-color: #088a08;">
         <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-            <a href="index.html" class="logo d-flex align-items-center me-auto">
+            <a href="{{route('tampilGreenLeader')}}" class="logo d-flex align-items-center me-auto">
                 <!-- Uncomment the line below if you also wish to use an image logo -->
                 <!-- <img src="assets/img/logo.webp" alt=""> -->
                 <h1 class="sitename">Green Leadership Indonesia</h1>
@@ -42,14 +46,16 @@
 
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#speaker">Speaker</a></li>
-                    <li><a href="#recent-blog-postst" class="active">Blog</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="{{route('tampilGreenLeader')}}">Home</a></li>
+                    <li><a href="{{route('tampilGreenLeader')}}#about">About</a></li>
+                    <li><a href="{{route('tampilTimGLI')}}">Team</a></li>
+                    <li><a href="{{route('tampilGreenLeader')}}#speaker">Speaker</a></li>
+                    <li><a href="{{route('tampilGreenLeader')}}#recent-blog-postst" class="active">Blog</a></li>
+                    <li><a href="{{route('tampilGreenLeader')}}#contact">Contact</a></li>
+                    <a class="btn-getstarted" href="{{route('home')}}">Kembali</a>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
-
-            <a class="btn-getstarted" href="{{route('home')}}">Kembali</a>
 
         </div>
     </header>
@@ -61,7 +67,7 @@
             <div class="container">
                 <nav class="breadcrumbs">
                     <ol>
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="{{route('tampilGreenLeader')}}">Home</a></li>
                         <li class="current">Blog Details</li>
                     </ol>
                 </nav>
@@ -75,15 +81,16 @@
                 <div class="col-lg-8">
 
                     <!-- Blog Details Section -->
+                    <!--<div class="card">-->
                     <section id="blog-details" class="blog-details section">
-                        <div class="container" data-aos="fade-up">
+                        <div class="container widget-item" data-aos="fade-up">
 
                             @foreach ($berita as $b)
 
                             <article class="article">
 
                                 <div class="hero-img" data-aos="zoom-in">
-                                    <img src="{{ asset('/storage/'.$b->gambar_berita) }}" alt="Featured blog image" class="img-fluid" loading="lazy">
+                                    <img src="{{asset('img/gambar_berita/'.$b->gambar_berita)}}" alt="Featured blog image" class="img-fluid" loading="lazy">
                                     <div class="meta-overlay">
                                         <div class="meta-categories">
                                             <strong class="category">{{$b->kategori}}</strong>
@@ -93,13 +100,13 @@
 
                                 <div class="article-content" data-aos="fade-up" data-aos-delay="100">
                                     <div class="content-header">
-                                        <h1 class="title">{{$b->judul}}</h1>
+                                        <h1 class="title text-black">{{$b->judul}}</h1>
 
                                         <div class="author-info">
                                             <div class="author-details">
                                                 <img src="{{asset('img/logo-program/Logo-GLI.png')}}" alt="Author" class="author-img">
                                                 <div class="info">
-                                                    <h4>{{$b->penulis}}</h4>
+                                                    <h4 class="text-black">{{$b->penulis}}</h4>
                                                     <!-- <span class="role">Senior Web Developer</span> -->
                                                 </div>
                                             </div>
@@ -114,27 +121,27 @@
                                     </div>
 
                                     <!-- <div class="meta-bottom">
-                                        <div class="tags-section">
-                                            <h4>Related Topics</h4>
-                                            <div class="tags">
-                                                <a href="#" class="tag">Web Development</a>
-                                                <a href="#" class="tag">Performance</a>
-                                                <a href="#" class="tag">Best Practices</a>
-                                                <a href="#" class="tag">Trends</a>
-                                                <a href="#" class="tag">2025</a>
+                                            <div class="tags-section">
+                                                <h4>Related Topics</h4>
+                                                <div class="tags">
+                                                    <a href="#" class="tag">Web Development</a>
+                                                    <a href="#" class="tag">Performance</a>
+                                                    <a href="#" class="tag">Best Practices</a>
+                                                    <a href="#" class="tag">Trends</a>
+                                                    <a href="#" class="tag">2025</a>
+                                                </div>
                                             </div>
-                                        </div>
-
-                                        <div class="share-section">
-                                            <h4>Share Article</h4>
-                                            <div class="social-links">
-                                                <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-                                                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                                                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-                                                <a href="#" class="copy-link" title="Copy Link"><i class="bi bi-link-45deg"></i></a>
+    
+                                            <div class="share-section">
+                                                <h4>Share Article</h4>
+                                                <div class="social-links">
+                                                    <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+                                                    <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                                                    <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                                                    <a href="#" class="copy-link" title="Copy Link"><i class="bi bi-link-45deg"></i></a>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div> -->
+                                        </div> -->
                                 </div>
 
                             </article>
@@ -142,6 +149,7 @@
 
                         </div>
                     </section>
+                    <!--</div>-->
                     <!-- /Blog Details Section -->
 
                 </div>
@@ -153,13 +161,13 @@
                         <!-- Recent Posts Widget -->
                         <div class="recent-posts-widget widget-item">
 
-                            <h3 class="widget-title">Recent Posts</h3>
+                            <h3 class="widget-title text-black">Recent Posts</h3>
                             @foreach ($beritaFull as $bb)
 
                             <div class="post-item">
-                                <img src="assets/img/blog/blog-post-square-1.webp" alt="" class="flex-shrink-0">
+                                <img src="{{asset('/storage/'.$b->gambar_berita) }}" alt="" class="flex-shrink-0">
                                 <div>
-                                    <h4><a href="blog-details.html">{{$bb->judul}}</a></h4>
+                                    <h4><a href="{{route('tampilBeritaGLI', $bb->slug)}}">{{$bb->judul}}</a></h4>
                                     <time datetime="2020-01-01">{{$bb->tanggal_rilis}}</time>
                                 </div>
                             </div>
@@ -188,7 +196,7 @@
                     </a>
                     <div class="footer-contact pt-3">
                         <p>Jl. Palapa XVII No.3 11, RT.11/RW.5, Ps. Minggu, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12520</p>
-                        <p class="mt-3"><strong>Phone:</strong> <span>+62 853-7306-7368 (Ichlassul Amal)</span></p>
+                        <p class="mt-3"><strong>Phone:</strong> <span>+62 852-4260-0884 (Fachruddin Dokumalamo)</span></p>
                         <p><strong>Email:</strong> <span>instituthijauindonesiaIHI@gmail.com</span></p>
                     </div>
                 </div>

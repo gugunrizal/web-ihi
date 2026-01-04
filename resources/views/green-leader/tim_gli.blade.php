@@ -42,15 +42,16 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="{{route('tampilTimGLI')}}">Team</a></li>
-          <li><a href="#speaker">Speaker</a></li>
-          <li><a href="#recent-blog-postst">Blog</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="{{route('tampilGreenLeader')}}">Home</a></li>
+          <li><a href="{{route('tampilGreenLeader')}}#about">About</a></li>
+          <li><a href="{{route('tampilTimGLI')}}" class="active">Team</a></li>
+          <li><a href="{{route('tampilGreenLeader')}}#speaker">Speaker</a></li>
+          <li><a href="{{route('tampilGreenLeader')}}#recent-blog-postst">Blog</a></li>
+          <li><a href="{{route('tampilGreenLeader')}}#contact">Contact</a></li>
+        <a class="btn-getstarted" href="{{route('home')}}">Kembali</a>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
-      <a class="btn-getstarted" href="{{route('home')}}">Kembali</a>
 
     </div>
   </header>
@@ -62,62 +63,175 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Tim Green Leadership Indonesia</h2>
-        <p>Streering Commitee Green Leadership Indonesia Batch 5</p>
+        <h2>Team Green Leadership Indonesia Batch 5</h2>
+        <p><strong>Streering Committee Green Leadership Indonesia Batch 5</strong></p>
       </div>
       <!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row justify-content-center">
-            <div class="col-md-2">
-                <div class="testimonial-item">
-                <img src="{{asset('img/green-leader/tim-gli/sc/1.jpg')}}" class="testimonial-img" alt="">
-                <h3>Chalid Muhammad</h3>
-                <h4>Ketua IHI</h4>
-              </div>
+          <div class="col-md-2">
+            <div class="testimonial-item">
+              <img src="{{asset('img/green-leader/tim-gli/sc/1.jpg')}}" class="testimonial-img" alt="">
+              <h3>Chalid Muhammad</h3>
+              <h4>Kepala Sekolah</h4>
             </div>
-            <div class="col-md-2">
-                <div class="testimonial-item">
-                <img src="{{asset('img/green-leader/tim-gli/sc/2.jpg')}}" class="testimonial-img" alt="">
-                <h3>Selamet Daroyni</h3>
-                <h4>Direktur Eksekutif IHI</h4>
-              </div>
+          </div>
+          <div class="col-md-2">
+            <div class="testimonial-item">
+              <img src="{{asset('img/green-leader/tim-gli/sc/2.jpg')}}" class="testimonial-img" alt="">
+              <h3>Selamet Daroyni</h3>
+              <h4>Direktur Eksekutif IHI</h4>
             </div>
-            <div class="col-md-2">
-                <div class="testimonial-item">
-                <img src="{{asset('img/green-leader/tim-gli/sc/3.png')}}" class="testimonial-img" alt="">
-                <h3>Dani Setiawan</h3>
-                <h4>Ketua KNTI</h4>
-              </div>
+          </div>
+          <div class="col-md-2">
+            <div class="testimonial-item">
+              <img src="{{asset('img/green-leader/tim-gli/sc/3.png')}}" class="testimonial-img" alt="">
+              <h3>Dani Setiawan</h3>
+              <h4>Ketua KNTI</h4>
             </div>
-            <div class="col-md-2">
-                <div class="testimonial-item">
-                <img src="{{asset('img/green-leader/tim-gli/sc/4.png')}}" class="testimonial-img" alt="">
-                <h3>Zenzi Suhadi</h3>
-                <h4>Direktur Walhi</h4>
-              </div>
+          </div>
+          <div class="col-md-2">
+            <div class="testimonial-item">
+              <img src="{{asset('img/green-leader/tim-gli/sc/4.png')}}" class="testimonial-img" alt="">
+              <h3>Zenzi Suhadi</h3>
+              <h4>Direktur Walhi</h4>
             </div>
+          </div>
+          <div class="col-md-2">
+            <div class="testimonial-item">
+              <img src="{{asset('img/green-leader/tim-gli/sc/5.png')}}" class="testimonial-img" alt="">
+              <h3>Agung Wibowo</h3>
+              <h4>Koordinator Eksekutif HUMA</h4>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
+      <div class="container section-title mt-3" data-aos="fade-up">
         <hr>
-        <p>Project Officer</p>
+        <p><strong>Organizing Committee Green Leadership Indonesia Batch 5</strong></p>
       </div>
       <!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="row justify-content-center">
-            @foreach ($fasil as $fa)
-            <div class="col-md-2">
-                <div class="testimonial-item">
-                <img src="{{asset('img/green-leader/tim-gli/sc/1.jpg')}}" class="testimonial-img" alt="">
-                <h3>{{$fa->nama}}</h3>
-                <h4>{{$fa->jabatan}}</h4>
-              </div>
+        <div class="row justify-content-center">
+          <div class="col-md-2">
+            <div class="testimonial-item">
+              <img src="{{asset('img/green-leader/tim-gli/oc/2.png')}}" class="testimonial-img" alt="">
+              <h3>Fachruddin Dokumalamo</h3>
+              <h4>Project Officer</h4>
             </div>
-            @endforeach
+          </div>
+          <div class="col-md-2">
+            <div class="testimonial-item">
+              <img src="{{asset('img/green-leader/tim-gli/oc/1.jpg')}}" class="testimonial-img" alt="">
+              <h3>Zepanya Sihombing</h3>
+              <h4>Builders</h4>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="testimonial-item">
+              <img src="{{asset('img/green-leader/tim-gli/pokja/weavers/3.jpg')}}" class="testimonial-img" alt="">
+              <h3>Ulfatur Roziana A. H.</h3>
+              <h4>Weavers</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container section-title mt-3" data-aos="fade-up">
+        <hr>
+        <p><strong>Kelompok Kerja - Builders Team</strong></p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center">
+          @foreach ($builders as $bl)
+          <div class="col-md-2">
+            <div class="testimonial-item">
+              <img src="{{asset('img/green-leader/tim-gli/pokja/builders/'.$bl->foto)}}" class="testimonial-img" alt="">
+              <h3>{{$bl->nama}}</h3>
+              <h4>{{$bl->jabatan}}</h4>
+            </div>
+          </div>
+          @endforeach
+        </div>
+      </div>
+
+      <div class="container section-title mt-3" data-aos="fade-up">
+        <hr>
+        <p><strong>Kelompok Kerja - Weavers Team</strong></p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center">
+          @foreach ($weavers as $wv)
+          <div class="col-md-2">
+            <div class="testimonial-item">
+              <img src="{{asset('img/green-leader/tim-gli/pokja/weavers/'.$wv->foto)}}" class="testimonial-img" alt="">
+              <h3>{{$wv->nama}}</h3>
+              <h4>{{$wv->jabatan}}</h4>
+            </div>
+          </div>
+          @endforeach
+        </div>
+      </div>
+
+      <div class="container section-title mt-3" data-aos="fade-up">
+        <hr>
+        <p><strong>Kelompok Kerja - STAR Team</strong></p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center">
+          @foreach ($star as $st)
+          <div class="col-md-2">
+            <div class="testimonial-item">
+              <img src="{{asset('img/green-leader/tim-gli/pokja/star/'.$st->foto)}}" class="testimonial-img" alt="">
+              <h3>{{$st->nama}}</h3>
+              <h4>{{$st->jabatan}}</h4>
+            </div>
+          </div>
+          @endforeach
+        </div>
+      </div>
+
+      <div class="container section-title mt-3" data-aos="fade-up">
+        <hr>
+        <p><strong>Koordinator Regional</strong></p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center">
+          @foreach ($koreg as $kr)
+          <div class="col-md-2">
+            <div class="testimonial-item">
+              <img src="{{asset('img/green-leader/tim-gli/koreg/'.$kr->foto)}}" class="testimonial-img" alt="">
+              <h3>{{$kr->nama}}</h3>
+              <h4>{{$kr->jabatan}}</h4>
+            </div>
+          </div>
+          @endforeach
+        </div>
+      </div>
+      
+      <div class="container section-title mt-3" data-aos="fade-up">
+        <hr>
+        <p><strong>Fasilitator</strong></p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center">
+          @foreach ($fasil as $fa)
+          <div class="col-md-2 col-4">
+            <div class="testimonial-item">
+              <img src="{{asset('img/green-leader/tim-gli/fasil/'.$fa->foto)}}" class="testimonial-img" alt="">
+              <p>{{$fa->nama}}</p>
+            </div>
+          </div>
+          @endforeach
         </div>
       </div>
 
@@ -136,7 +250,7 @@
           </a>
           <div class="footer-contact pt-3">
             <p>Jl. Palapa XVII No.3 11, RT.11/RW.5, Ps. Minggu, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12520</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+62 853-7306-7368 (Ichlassul Amal)</span></p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+62 852-4260-0884 (Fachruddin Dokumalamo)</span></p>
             <p><strong>Email:</strong> <span>instituthijauindonesiaIHI@gmail.com</span></p>
           </div>
         </div>

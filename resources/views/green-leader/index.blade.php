@@ -7,6 +7,10 @@
   <title>Green Leadership Indonesia</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
+  @foreach ($berita as $b)
+  <meta property="og:title" content="{{$b->judul}}">
+  <meta property="og:image" content="{{asset('img/gambar_berita/'.$b->gambar_berita)}}">
+  @endforeach
 
   <!-- Favicons -->
   <link href="{{asset('img/logo-program/Logo-GLI.png')}}" rel="icon">
@@ -42,15 +46,17 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="{{route('tampilGreenLeader')}}" class="active">Home</a></li>
+          <li><a href="{{route('tampilGreenLeader')}}#about">About</a></li>
           <li><a href="{{route('tampilTimGLI')}}">Team</a></li>
-          <li><a href="#speaker">Speaker</a></li>
-          <li><a href="#recent-blog-postst">Blog</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="{{route('tampilGreenLeader')}}#speaker">Speaker</a></li>
+          <li><a href="{{route('tampilGreenLeader')}}#recent-blog-postst">Blog</a></li>
+          <li><a href="{{route('tampilGreenLeader')}}#contact">Contact</a></li>
+          <a class="btn-getstarted" href="{{route('home')}}">Kembali</a>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="{{route('home')}}">Kembali</a>
 
     </div>
   </header>
@@ -66,7 +72,7 @@
             <h1 class="text-white">Green Leadership Indonesia</h1>
             <p class="text-white">Memfasilitasi Tumbuhnya Pemimpin dengan Perspektif Keadilan Sosial dan Ekologis</p>
             <div class="d-flex">
-              <a href="#" class="btn-get-started">Login LMS</a>
+              <a href="https://lmsgli.instituthijauindonesia.or.id/" class="btn-get-started">Login LMS</a>
             </div>
           </div>
           <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
@@ -90,22 +96,22 @@
 
         <div class="row gy-4">
 
-          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 content" data-aos="fade-up" data-aos-delay="100">
             <p>
-              <strong>Institut Hijau Indonesia</strong> secara sungguh-sungguh ingin membangun peradaban hijau Indonesia. Di bawah Yayasan Peradaban Hijau Indonesia, Institut Hijau Indonesia menjadi wadah untuk menuju peradaban Hijau Indonesia yang lebih adil dan lestari.
+              <strong>Green Leadership Indonesia (GLI) </strong>adalah program pendidikan informal hijau yang dirancang untuk mengembangkan pemimpin yang berfokus pada isu-isu lingkungan dan keberlanjutan. Program ini diinisiasi oleh <strong>Institut Hijau Indonesia (IHI)</strong> bekerja sama dengan <strong>WALHI (Wahana Lingkungan Hidup Indonesia), KNTI (Kesatuan Nelayan Tradisional Indonesia), dan HuMa (Perkumpulan untuk Pembaruan Hukum Berbasis Masyarakat dan Ekologis)</strong>. GLI diadakan bertujuan untuk membangun pemimpin dari berbagai latar belakang yang memiliki keberpihakan terhadap keadilan sosial dan ekologis, sekaligus melahirkan inisiatif keberlanjutan di tingkat lokal, nasional, maupun internasional.
+              <br><br>
+
+              Sejak pertama kali dilaksanakan pada tahun 2021, GLI telah dirancang secara sistematis untuk memfasilitasi tumbuhnya pemimpin muda Indonesia yang kritis dan berorientasi pada perubahan. Dengan visi <strong>"Menciptakan pemimpin hijau yang mampu menginspirasi perubahan, membawa dampak positif bagi lingkungan, masyarakat, dan generasi mendatang, serta memiliki perspektif keadilan sosial dan ekologis",</strong> GLI memfokuskan diri pada pengembangan kapasitas pemimpin. Misi utamanya meliputi membekali peserta dengan pengetahuan mendalam tentang isu keberlanjutan, mengasah keterampilan kepemimpinan berbasis solusi, membangun jejaring kolaborasi lintas sektor, dan mendorong aksi nyata yang berfokus pada keadilan ekologis dan sosial.
+              <br><br>
+
+              Melalui tagline <strong>"Memfasilitasi Tumbuhnya Pemimpin dengan Perspektif Keadilan Sosial dan Ekologis",</strong> GLI menciptakan ruang untuk mengasah diri, berkolaborasi, dan memberikan dampak nyata. Pada tahun keempat GLI telah menumbuhkan 395 pemimpin baru yang tersebar di berbagai wilayah Indonesia dan terbagi menjadi 9 regional. Para pemimpin ini lahir dari kekhawatiran bersama terhadap krisis ekologi, bencana lingkungan, serta ancaman perubahan iklim yang terus meningkat. Dengan keberanian bertindak dan kemampuan kolaborasi lintas sektor, mereka kini menjadi garda terdepan dalam mendorong agenda penyelamatan lingkungan hidup melalui inisiatif-inisiatif yang berdampak nyata di masyarakat.
 
             </p>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <p>
-              Program Edukasi dari Institut Hijau Indonesia untuk menumbuhkan kesadaran demokrasi, sosial, dan lingkungan.
-              Menggunakan pendekatan inklusif dan berbasis pengalaman, <strong>Green Leadership Indonesia</strong> mendorong generasi muda membangun negara yang adil secara sosial dan ekologis.
-            </p>
-            <!-- <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a> -->
           </div>
 
         </div>
+
+      </div>
 
       </div>
 
@@ -122,7 +128,19 @@
       </div><!-- End Section Title -->
 
       <div class="container">
+        <div class="row gy-4 justify-content-center">
+          @foreach ($speaker as $s)
 
+          <div class="col-6 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item position-relative">
+              <img src="{{asset('img/speaker/'.$s->foto)}}" class="img-fluid rounded" alt="Green Leadership Indonesia">
+              <h5 class="text-center mt-2">{{$s->nama}}</h5>
+              <p style="font-style: italic;" class="text-center">{{$s->materi}}</p>
+            </div>
+          </div>
+
+          @endforeach
+        </div>
       </div>
 
     </section>
@@ -142,7 +160,7 @@
         <div class="row gy-5 justify-content-center">
 
           @foreach ($berita as $b)
-          <div class="col-xl-4 col-md-6">
+          <div class="col-xl-3 col-md-6">
             <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="100">
 
 
@@ -174,6 +192,13 @@
           </div>
           @endforeach
 
+          <div class="container">
+            <div class="row" style="padding-top: 50px;">
+              <div class="col-12 text-center">
+                <a href="{{route('tampilAllBeritaGLI')}}" class="btn btn-success">Selengkapnya</a>
+              </div>
+            </div>
+          </div>
 
         </div>
 
@@ -210,7 +235,7 @@
                 <i class="bi bi-telephone flex-shrink-0"></i>
                 <div>
                   <h3>Call Us</h3>
-                  <p>+62 853-7306-7368 (Ichlassul Amal)</p>
+                  <p>+62 852-4260-0884 (Fachruddin Dokumalamo)</p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -249,7 +274,7 @@
           </a>
           <div class="footer-contact pt-3">
             <p>Jl. Palapa XVII No.3 11, RT.11/RW.5, Ps. Minggu, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12520</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+62 853-7306-7368 (Ichlassul Amal)</span></p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+62 852-4260-0884 (Fachruddin Dokumalamo)</span></p>
             <p><strong>Email:</strong> <span>instituthijauindonesiaIHI@gmail.com</span></p>
           </div>
         </div>

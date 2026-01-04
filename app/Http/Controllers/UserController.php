@@ -20,6 +20,7 @@ class UserController extends Controller
             ->orderBy('created_at', 'desc')
             ->limit(6)
             ->get();
+
         return view('index', ['berita' => $berita]);
     }
 
@@ -34,12 +35,13 @@ class UserController extends Controller
         $berita = Berita::select('*')
             ->where('slug', $slug)
             ->get();
+        $beritaFull = Berita::select('*')->limit(10)->get();
         // $berita = html_entity_decode($berita);
         // $berita = strip_tags($berita);
         // $allowedTags = '<p><a><strong><em><ul><ol><li><h1><h2><h3><h4><h5><h6><div><span><br><hr><img><table><tr><td><th>';
         // $berita = strip_tags(htmlspecialchars_decode($berita), $allowedTags);
         // return 
-        return view('tampilBerita', compact('berita'));
+        return view('tampilBerita', ['berita' => $berita, 'beritaFull' => $beritaFull]);
     }
 
     public function tampilTim()

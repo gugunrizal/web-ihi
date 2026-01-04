@@ -32,7 +32,7 @@
 
 <body class="index-page">
 
-    <header id="header" class="header d-flex align-items-center fixed-top bg-success">
+    <header id="header" class="header d-flex align-items-center fixed-top bg-ihi">
         <div class="container position-relative d-flex align-items-center justify-content-between">
 
             <a href="{{route('home')}}" class="logo d-flex align-items-center me-auto me-xl-0">
@@ -43,13 +43,29 @@
 
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="{{route('home')}}" class="">Beranda</a></li>
-                    <li><a href="{{route('home')}}" class="">Tentang Kami</a></li>
-                    <li><a href="{{route('home')}}" class="">Program Kami</a></li>
-                    <li><a href="{{route('home')}}" class="active">Tim</a></li>
-                    <li><a href="{{route('home')}}" class="">Galeri</a></li>
-                    <li><a href="{{route('home')}}" class="">Blog</a></li>
-                    <li><a href="{{route('home')}}" class="">Kontak Kami</a></li>
+                    <li><a href="{{route('home')}}#hero" class="">Beranda</a></li>
+                    <li class="dropdown"><a href="{{route('home')}}#about" class=""><span>Tentang Kami</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="{{route('tampilAbout')}}">Sejarah</a></li>
+                            <li><a href="{{route('tampilTim')}}">Pengurus Inti</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="{{route('home')}}#how-we-work" class=""><span>Program Kami</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="{{route('tampilGreenLeader')}}">Green Leadership Indonesia</a></li>
+                            <li><a href="#">Green Youth Movement</a></li>
+                            <li><a href="#">Green Public Interest Lawyer</a></li>
+                            <li><a href="#">Laboratorium Keadilan Sosial dan Ekologis</a></li>
+                            <li><a href="#">Jurnal Peradaban Hijau</a></li>
+                            <li><a href="{{route('tampilCivic')}}">Civic Education</a></li>
+                        </ul>
+                    </li>
+                    <!-- <li><a href="{{route('tampilAllBerita')}}" class="">Blog</a></li> -->
+
+                    <li><a href="{{route('home')}}#team" class="active">Tim</a></li>
+                    <li><a href="{{route('home')}}#portfolio" class="">Galeri</a></li>
+                    <li><a href="{{route('home')}}#blog" class="">Blog</a></li>
+                    <li><a href="{{route('home')}}#contact" class="">Kontak Kami</a></li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
@@ -73,9 +89,9 @@
                     <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
                         <div class="team-card">
                             <div class="team-image">
-                                <img src="img/santri.png" class="img-fluid" alt="">
+                                <img src="{{asset('img/tim-ihi/chalid.jpg')}}" class="img-fluid" alt="">
                                 <div class="team-overlay">
-                                    <p>Institut Hijau Indonesia</p>
+                                    <p>Chalid Muhammad</p>
                                     <div class="team-social">
                                         <a href=""><i class="bi bi-twitter-x"></i></a>
                                         <a href=""><i class="bi bi-facebook"></i></a>
@@ -94,9 +110,9 @@
                     <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
                         <div class="team-card">
                             <div class="team-image">
-                                <img src="img/santri.png" class="img-fluid" alt="">
+                                <img src="{{asset('img/tim-ihi/selamet.jpg')}}" class="img-fluid" alt="">
                                 <div class="team-overlay">
-                                    <p>Institut Hijau Indonesia</p>
+                                    <p>Selamet Daroini</p>
                                     <div class="team-social">
                                         <a href=""><i class="bi bi-twitter-x"></i></a>
                                         <a href=""><i class="bi bi-facebook"></i></a>
@@ -115,9 +131,9 @@
                     <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
                         <div class="team-card">
                             <div class="team-image">
-                                <img src="img/santri.png" class="img-fluid" alt="">
+                                <img src="{{asset('img/tim-ihi/akhmad.jpg')}}" class="img-fluid" alt="">
                                 <div class="team-overlay">
-                                    <p>Institut Hijau Indonesia</p>
+                                    <p>Akhmad Supiani</p>
                                     <div class="team-social">
                                         <a href=""><i class="bi bi-twitter-x"></i></a>
                                         <a href=""><i class="bi bi-facebook"></i></a>
@@ -136,9 +152,9 @@
                     <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
                         <div class="team-card">
                             <div class="team-image">
-                                <img src="img/santri.png" class="img-fluid" alt="">
+                                <img src="{{asset('img/tim-ihi/zen.jpg')}}" class="img-fluid" alt="">
                                 <div class="team-overlay">
-                                    <p>Institut Hijau Indonesia</p>
+                                    <p>Zen Smith</p>
                                     <div class="team-social">
                                         <a href=""><i class="bi bi-twitter-x"></i></a>
                                         <a href=""><i class="bi bi-facebook"></i></a>
